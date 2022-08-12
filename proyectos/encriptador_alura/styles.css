@@ -213,7 +213,7 @@ footer a:hover {
   }
   main {
     height: 90vh;
-    position: relative;
+    /* position: relative; */
   }
   #content {
     flex-direction: row;
