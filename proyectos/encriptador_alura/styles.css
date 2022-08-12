@@ -50,9 +50,11 @@ h1 {
   height: inherit;
   width: calc(100% / 1.6);
 }
-#divTextInteract textarea {
+#divTextInteract #divTextareTrash {
   position: relative;
   top: 100px;
+}
+#divTextInteract textarea {
   width: 100%;
 }
 #divTextInteract #spanTrash {
@@ -212,7 +214,7 @@ footer a:hover {
     left: 40px;
   }
   main {
-    height: 100vh;
+    height: 90vh;
     /* position: relative; */
   }
   #content {
@@ -252,7 +254,7 @@ footer a:hover {
   }
   main {
     max-width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
   }
   #content {
@@ -268,6 +270,9 @@ footer a:hover {
     position: relative;
     right: 15px;
     top: calc(100% / 10);
+  }
+  #divTextInteract #divTextareTrash {
+    top: 0px;
   }
   #divTextInteract textarea {
     /* max-width: calc(100% - 30px); */
