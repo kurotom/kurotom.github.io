@@ -235,13 +235,20 @@ footer a:hover {
     width: 200px;
   }
 
+  footer a:hover {
+    box-shadow: 0px 1px 10px blue;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 }
 
 @media screen and (max-width: 900px) {
   h1 {
     height: auto;
     width: 100%;
-
+    left: 0px;
   }
   main {
     max-width: 100%;
@@ -256,11 +263,11 @@ footer a:hover {
   #divTextInteract {
     font-family: 'Chakra Petch', sans-serif;
     max-width: 100%;
-    max-height: 50%;
+    height: 60%;
     justify-content: space-around;
     position: relative;
     right: 15px;
-    top: 90px;
+    top: calc(100% / 10);
   }
   #divTextInteract textarea {
     /* max-width: calc(100% - 30px); */
@@ -278,7 +285,8 @@ footer a:hover {
     width: auto;
   }
   #mensajeResult {
-    max-width: calc(100% / 1.6);
+    /* max-width: calc(100% / 1.6); */
+    width: calc(100% / 1.6);
     max-height: calc((100% - 50% ) / 2);
     position: relative;
     bottom: 30px;
@@ -297,5 +305,11 @@ footer a:hover {
   #copiar {
     position: relative;
     top: 5px;
+  }
+  footer a:hover {
+    box-shadow: 0px 1px 10px blue;
+    border-radius: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
