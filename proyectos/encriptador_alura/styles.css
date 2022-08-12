@@ -268,7 +268,7 @@ footer a:hover {
     height: 60%;
     justify-content: space-around;
     position: relative;
-    right: 15px;
+    /* right: 15px; */
     top: calc(100% / 10);
   }
   #divTextInteract #divTextareTrash {
@@ -295,7 +295,7 @@ footer a:hover {
     max-height: calc((100% - 50% ) / 2);
     position: relative;
     bottom: 30px;
-    right: 15px;
+    /* right: 15px; */
     top: 30px;
   }
   #failedContent div {
