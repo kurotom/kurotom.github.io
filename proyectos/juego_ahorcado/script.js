@@ -257,7 +257,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       div.appendChild(span);
     })
-    console.log(div)
     return div.outerHTML;
   }
 
@@ -332,11 +331,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // end -- funcion palabraSecreta
   //
 
-  const theGame = (vida, usoCanvas) => {
+  const theGame = (vida, usoCanvas, newWords) => {
     console.log('the game');
-    console.log(usoCanvas)
 
-    // Determinado por la cantidad de partes del muñeco ahorcado
+    if (newWords !== undefined) {
+      newWords.forEach(item => {
+        listOfWords.push(item)
+      })
+    }
+    console.log(listOfWords)
 
     let palabraJuego = palabraSecreta();
     console.log(palabraJuego)
@@ -350,7 +353,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let palabraDisplay = document.getElementById('spanPalabra');
     // palabraDisplay.innerText = palabraJuego.procesada;
 
-        palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada);
+    palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada);
 
 
     let statusGame = document.getElementById('displayStatusGame');
@@ -367,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lapiz.strokeStyle = 'black';
     lapiz.lineWidth = 2;
 
-    console.log(vida)
+    // console.log(vida)
 
     document.addEventListener('keydown', (evento) => {
 
@@ -375,7 +378,10 @@ document.addEventListener('DOMContentLoaded', () => {
       let teclaPresionada = evento.key.toUpperCase();
 
       let xIndex = palabraJuego.quitadas.findIndex(item => item[0] === String(teclaPresionada));
+
+
       // console.log(xIndex, teclaPresionada)
+      // console.log('--->', palabraJuego.quitadas)
 
       if (xIndex > -1) {
         console.log(xIndex, palabraJuego.quitadas[xIndex], teclaPresionada);
@@ -383,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
         palabraJuego.procesada.splice(palabraJuego.quitadas[xIndex][1], 1, palabraJuego.quitadas[xIndex][0]);
         palabraJuego.quitadas.splice(xIndex, 1);
 
-            palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada);
+        palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada);
 
 
         // console.log(palabraJuego.quitadas, palabraJuego.procesada);
@@ -401,12 +407,20 @@ document.addEventListener('DOMContentLoaded', () => {
           mensajeWinLose.innerText = 'Ganaste';
 
           // DETIENE EL JUEGO
-          vida = -1
+          vida = null
           //
         }
       } else {
 
-        // console.log('fallo intento', vida);
+        // console.log('fallo intento', teclaPresionada, palabraJuego.quitadas);
+        // console.log(vida)
+
+        if (vida > -1 && vida !== null) {
+          if (typeof(palabraJuego) !== 'boolean') {
+            let erroneas = document.getElementById('incorrectas');
+            erroneas.innerHTML += `<span>${teclaPresionada}</span>`;
+          }
+        }
 
         // ACA dibuja una parte del Ahorcado
         // dibujoAhorcado(lapiz, vida, juegoNuevo);
@@ -460,7 +474,7 @@ document.addEventListener('DOMContentLoaded', () => {
           mensajeWinLose.setAttribute('class', 'loserStyle')
           mensajeWinLose.innerText = 'Perdiste';
 
-          vida = -1
+          vida = null
         }
         vida--;
       }
@@ -471,6 +485,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const manejoNuevaPalabra = () => {
+
+    // let status = document.getElementById('displayStatusGame');
+    // status.innerText = '';
+    // let erroneas = document.getElementById('incorrectas');
+    // erroneas.innerHTML = '';
+
+
     screenInicio.style.display = 'none';
     screenWords.style.display = 'flex';
     screenGame.style.display = 'none';
@@ -491,29 +512,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (evento) => {
       evento.preventDefault();
+
+      let palabrasNuevas = [];
+
       if (texto.value.trim() !== '') {
-        listOfWords.push(texto.value.toUpperCase())
+        // listOfWords.push(texto.value.toUpperCase())
+
+        palabrasNuevas.push(texto.value.toUpperCase())
+
         texto.value = '';
-        console.log('new list words-->', listOfWords);
 
-        screenWords.style.display = 'none';
-        screenGame.style.display = 'flex';
+        // console.log('new list words-->', listOfWords);
+        console.log('words-->', palabrasNuevas);
 
-        document.removeEventListener('keydown', theGame);
+        // screenWords.style.display = 'none';
+        // screenGame.style.display = 'flex';
 
-        let divCanvas = document.getElementById('tableroCanvas');
-        divCanvas.innerHTML = '';
+        // let erroneas = document.getElementById('incorrectas');
+        // erroneas.innerHTML = '';
 
-        let canvas = document.createElement('canvas');
-        canvas.setAttribute('id', 'canvas');
-        canvas.style.cssText = `
-          width: 100%;
-          height: 100%;
-        `
-        divCanvas.appendChild(canvas);
+        // document.removeEventListener('keydown', theGame);
+        //
+        // let divCanvas = document.getElementById('tableroCanvas');
+        // divCanvas.innerHTML = '';
+        //
+        // let canvas = document.createElement('canvas');
+        // canvas.setAttribute('id', 'canvas');
+        // canvas.style.cssText = `
+        //   width: 100%;
+        //   height: 100%;
+        // `
+        // divCanvas.appendChild(canvas);
+        //
+        // let inicioVida = 10;
+        // theGame(inicioVida, canvas);
 
-        let inicioVida = 10;
-        theGame(inicioVida, canvas);
+
+        window.sessionStorage.setItem('palabras', JSON.stringify(palabrasNuevas));
+
+        window.sessionStorage.setItem('reload', true)
+
+        window.location.reload();
 
       } else {
         texto.value = '';
@@ -548,7 +587,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let canvAs = document.getElementById('canvas');
 
     let inicioVida = 10;
+    let words  = JSON.parse(window.sessionStorage.getItem('palabras'));
+    if (words !== null) {
+      theGame(inicioVida, canvAs, words);
+      window.sessionStorage.removeItem('palabras')
+    }
     theGame(inicioVida, canvAs);
+
+
   };
   //    ////    //  //    ////    //  //    ////    //
   //    ////    //  //    ////    //  //    ////    //
@@ -569,19 +615,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.removeEventListener('keydown', theGame);
 
-    let c = document.getElementById('canvas');
+    let can = document.getElementById('canvas');
 
     let inicioVida = 10;
-    theGame(inicioVida, c);
+    theGame(inicioVida, can);
 
   })
 
 
   nuevaPalabra.addEventListener('click', () => {
+    document.removeEventListener('keydown', theGame, true);
     manejoNuevaPalabra();
   })
 
   btnAddWord.addEventListener('click', () => {
+    document.removeEventListener('keydown', theGame, true);
     manejoNuevaPalabra();
   })
 

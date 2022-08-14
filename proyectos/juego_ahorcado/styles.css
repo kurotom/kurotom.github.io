@@ -123,7 +123,7 @@ body {
 #thegame #mostrarPalabra {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 3px;
 }
 #thegame #mostrarPalabra #spanPalabra {
   display: flex;
@@ -137,8 +137,12 @@ body {
   gap: 20px;
   font-size: 20px;
   font-weight: bold;
-  padding-bottom: 4px;
   margin-bottom: 4px;
+}
+#thegame #mostrarPalabra #spanPalabra div span {
+  border: 2px solid orange;
+  padding: 5px;
+  border-radius: 10px;
 }
 #thegame #mostrarPalabra #displayStatusGame, #thegame #mostrarPalabra #winORlose {
   text-align: center;
@@ -152,13 +156,19 @@ body {
 #thegame #mostrarPalabra #winORlose {
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #btnes {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+#incorrectas {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-weight: bold;
 }
 
 
