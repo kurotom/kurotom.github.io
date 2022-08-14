@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 // ahorcado son 10 partes
 //
-  const dibujoAhorcado = (pencil, indexVida, bol) => {
+  const dibujoAhorcado = (pencil, indexVida) => {
     const base = () => {
       // base horca
       pencil.beginPath();
@@ -127,150 +127,48 @@ document.addEventListener('DOMContentLoaded', () => {
       pencil.closePath();
     }
 
-    console.log('desde dibujoAhorcado', indexVida, bol);
-    // indexVida = 0;
+
+    console.log('desde dibujoAhorcado', indexVida);
 
 
-    if (indexVida !== -1) {
-      if (indexVida > 9 ) {
-        base();
-      } else if (indexVida > 8) {
-        mastil();
-      } else if (indexVida > 7) {
-        viga();
-      } else if (indexVida > 6) {
-        soga();
-      } else if (indexVida > 5) {
-        cabeza();
-      } else if (indexVida > 4) {
-        brazo_izquierdo();
-      } else if (indexVida > 3) {
-        torso();
-      } else if (indexVida > 2) {
-        brazo_derecho();
-      } else if (indexVida > 1) {
-        pierna_izquierda();
-      } else if (indexVida > 0) {
-        pierna_derecha();
-      }
+    if (indexVida > 9) {
+      base();
+    } else if (indexVida > 8) {
+      mastil();
+    } else if (indexVida > 7) {
+      viga();
+    } else if (indexVida > 6) {
+      soga();
+    } else if (indexVida > 5) {
+      cabeza();
+    } else if (indexVida > 4) {
+      brazo_izquierdo();
+    } else if (indexVida > 3) {
+      torso();
+    } else if (indexVida > 2) {
+      brazo_derecho();
+    } else if (indexVida > 1) {
+      pierna_izquierda();
+    } else if (indexVida > 0) {
+      pierna_derecha();
     }
 
   };
 
-  class Ahorcado {
-    constructor(pencil) {
-      this.pencil = pencil
-    }
-    base() {
-      this.pencil.beginPath();
-      this.pencil.moveTo(10, 140);
-      this.pencil.lineTo(110, 140);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-    mastil() {
-      this.pencil.beginPath();
-      this.pencil.moveTo(60, 5);
-      this.pencil.lineTo(60, 140);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-    viga() {
-      this.pencil.beginPath();
-      this.pencil.moveTo(60, 10);
-      this.pencil.lineTo(210, 10);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-
-    soga()  {
-      // soga horca
-      this.pencil.beginPath();
-      this.pencil.moveTo(200, 10);
-      this.pencil.lineTo(200, 30);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-    cabeza()  {
-      // cabeza
-      this.pencil.beginPath();
-      this.pencil.arc(200, 40, 12, 0, 2 * Math.PI);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-    brazo_izquierdo()  {
-      // brazo Izquierdo
-      this.pencil.beginPath();
-      this.pencil.moveTo(200, 52);
-      this.pencil.lineTo(180, 80);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-    torso()  {
-      // torso
-      this.pencil.beginPath();
-      this.pencil.moveTo(200, 52);
-      this.pencil.lineTo(200, 95);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-    brazo_derecho()  {
-      // brazo derecho
-      this.pencil.beginPath();
-      this.pencil.moveTo(200, 52);
-      this.pencil.lineTo(220, 80);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-    pierna_izquierda()  {
-      // pierna Izquierda
-      this.pencil.beginPath();
-      this.pencil.moveTo(200, 95);
-      this.pencil.lineTo(180, 122);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-    pierna_derecha()  {
-      // pierna derecha
-      this.pencil.beginPath();
-      this.pencil.moveTo(200, 95);
-      this.pencil.lineTo(215, 122);
-      this.pencil.stroke();
-      this.pencil.closePath();
-    }
-
-    render() {
-      console.log(this.pencil);
-    }
-
-  }
-
-  const formatoPalabraJuego = (arrayWord) => {
-    console.log(arrayWord)
-    let div = document.createElement('div');
-    arrayWord.forEach(item => {
-      let span = document.createElement('span');
-      if (item === ' ') {
-        span.innerText = '_';
-      } else {
-        span.innerText = item;
-      }
-      div.appendChild(span);
-    })
-    console.log(div)
-    return div.outerHTML;
-  }
 
 
-  //
-  // funcion palabra secreta
+
+
   const palabraSecreta = () => {
 
     // funcion para cortar palabras
     const cutWord = (palabra, maximo) => {
       let arrayWord = palabra.split('');
       let palabraProcesada = palabra.split('');
-      let letrasQuitadas = [];
+      let letrasQuitadas = []
+      let indexUnique = [];
+      let palabraCortada = [];
+
 
       // DEPURAR : NO ENTREGA INDICE CORRECTO LETRA
 
@@ -302,7 +200,6 @@ document.addEventListener('DOMContentLoaded', () => {
       return objetoResultado;
     }
     // end -- funcion para cortar palabras
-    //
 
 
     let index = Math.floor(Math.random() * (listOfWords.length));
@@ -328,13 +225,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-  };
+  }
   // end -- funcion palabraSecreta
-  //
 
-  const theGame = (vida, usoCanvas) => {
+  const theGame = (vida, juegoNuevo) => {
     console.log('the game');
-    console.log(usoCanvas)
 
     // Determinado por la cantidad de partes del muñeco ahorcado
 
@@ -345,29 +240,38 @@ document.addEventListener('DOMContentLoaded', () => {
     let mensajeWinLose = document.getElementById('winORlose');
     mensajeWinLose.innerText = '';
 
-
-    //  div palabra formada
     let palabraDisplay = document.getElementById('spanPalabra');
-    // palabraDisplay.innerText = palabraJuego.procesada;
-
-        palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada);
-
+    palabraDisplay.innerText = palabraJuego.procesada;
 
     let statusGame = document.getElementById('displayStatusGame');
 
 
-    let divCanvas = document.getElementById('tableroCanvas');
-    // let pantalla = document.getElementById('canvas');
-    // let lapiz = pantalla.getContext("2d");
-    let lapiz = usoCanvas.getContext("2d");
+    let divCanvas = document.getElementById('tebleroCanvas');
+    let pantalla = document.getElementById('canvas');
+    let lapiz = pantalla.getContext("2d");
 
-    lapiz.fillStyle = 'white';
-    lapiz.fillRect(0, 0, divCanvas.clientWidth, divCanvas.clientHeight);
+    if (juegoNuevo === false) {
+      // Nueva pantalla canvas
+      lapiz.fillStyle = 'white';
+      lapiz.fillRect(0, 0, divCanvas.clientWidth, divCanvas.clientHeight);
 
-    lapiz.strokeStyle = 'black';
-    lapiz.lineWidth = 2;
+      lapiz.strokeStyle = 'black';
+      lapiz.lineWidth = 2;
+    } else {
+      // Limpia canvas para nuevo juego
+      lapiz.clearRect(0, 0, divCanvas.clientWidth, divCanvas.clientHeight);
+
+      lapiz.fillStyle = 'white';
+      lapiz.fillRect(0, 0, divCanvas.clientWidth, divCanvas.clientHeight);
+
+      lapiz.strokeStyle = 'black';
+      lapiz.lineWidth = 2;
+
+      juegoNuevo = true;
+    }
 
     console.log(vida)
+
 
     document.addEventListener('keydown', (evento) => {
 
@@ -383,15 +287,13 @@ document.addEventListener('DOMContentLoaded', () => {
         palabraJuego.procesada.splice(palabraJuego.quitadas[xIndex][1], 1, palabraJuego.quitadas[xIndex][0]);
         palabraJuego.quitadas.splice(xIndex, 1);
 
-            palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada);
+        palabraDisplay.innerText = palabraJuego.procesada;
 
 
         // console.log(palabraJuego.quitadas, palabraJuego.procesada);
 
         if (palabraJuego.quitadas.length === 0 && vida > 0) {
-
-          document.removeEventListener('keydown', theGame);
-
+          this.removeEventListener('keydown', theGame);
           console.log('FIN DEL JUEGO');
 
           statusGame.innerText = 'FIN DEL JUEGO';
@@ -409,49 +311,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // console.log('fallo intento', vida);
 
         // ACA dibuja una parte del Ahorcado
-        // dibujoAhorcado(lapiz, vida, juegoNuevo);
-        let mono;
-        mono = new Ahorcado(lapiz);
-
-        switch(vida) {
-          case 10:
-            mono.base();
-            break;
-          case 9:
-            mono.mastil();
-            break;
-          case 8:
-            mono.viga();
-            break;
-          case 7:
-            mono.soga();
-            break;
-          case 6:
-            mono.cabeza();
-            break;
-          case 5:
-            mono.torso();
-            break;
-          case 4:
-            mono.brazo_izquierdo();
-            break;
-          case 3:
-            mono.brazo_derecho();
-            break;
-          case 2:
-            mono.pierna_izquierda();
-            break;
-          case 1:
-            mono.pierna_derecha();
-            break;
-        };
-
+        dibujoAhorcado(lapiz, vida);
         //
 
+
+
         if (vida === 0) {
-
-          document.removeEventListener('keydown', theGame);
-
+          this.removeEventListener('keydown', theGame);
           console.log('FIN DEL JUEGO');
 
           statusGame.innerText = 'FIN DEL JUEGO';
@@ -465,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
         vida--;
       }
 
-    }, false)
+    })
 
   };
 
@@ -494,26 +360,15 @@ document.addEventListener('DOMContentLoaded', () => {
       if (texto.value.trim() !== '') {
         listOfWords.push(texto.value.toUpperCase())
         texto.value = '';
-        console.log('new list words-->', listOfWords);
+        console.log(listOfWords);
 
         screenWords.style.display = 'none';
         screenGame.style.display = 'flex';
 
         document.removeEventListener('keydown', theGame);
 
-        let divCanvas = document.getElementById('tableroCanvas');
-        divCanvas.innerHTML = '';
-
-        let canvas = document.createElement('canvas');
-        canvas.setAttribute('id', 'canvas');
-        canvas.style.cssText = `
-          width: 100%;
-          height: 100%;
-        `
-        divCanvas.appendChild(canvas);
-
         let inicioVida = 10;
-        theGame(inicioVida, canvas);
+        theGame(inicioVida, false);
 
       } else {
         texto.value = '';
@@ -532,33 +387,16 @@ document.addEventListener('DOMContentLoaded', () => {
   let btnNuevoJuego = document.getElementById('nuevoJuego');
   let nuevaPalabra = document.getElementById('nuevaPalabra');
 
-  //
-  // comprueba si se hizo reload, para nuevo juego y lo elimina
-  if (JSON.parse(window.sessionStorage.getItem("reload")) !== null) {
-    window.sessionStorage.removeItem('reload');
-
-    console.log('RELOAD----->')
-
+  btnNuevoJuego.addEventListener('click', () => {
     screenInicio.style.display = 'none';
     screenWords.style.display = 'none';
     screenGame.style.display = 'flex';
 
     document.removeEventListener('keydown', theGame);
 
-    let canvAs = document.getElementById('canvas');
-
     let inicioVida = 10;
-    theGame(inicioVida, canvAs);
-  };
-  //    ////    //  //    ////    //  //    ////    //
-  //    ////    //  //    ////    //  //    ////    //
+    theGame(inicioVida, true);
 
-
-  btnNuevoJuego.addEventListener('click', () => {
-
-    window.sessionStorage.setItem('reload', true)
-
-    window.location.reload();
   })
 
 
@@ -569,10 +407,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.removeEventListener('keydown', theGame);
 
-    let c = document.getElementById('canvas');
-
     let inicioVida = 10;
-    theGame(inicioVida, c);
+    theGame(inicioVida, false);
 
   })
 

@@ -22,17 +22,39 @@
     </div>
 
 
-    <div class="">
-
+    <div id='inicio' class="">
+      <button id='startGame' class='btns' type="button" name="button">Iniciar Juego</button>
+      <button id='addWord' class='btns' type="button" name="button">Agregar palabra</button>
     </div>
 
 
-    <div class="">
-
+    <div id='insertPalabra' class="">
+      <form id='formWord' class="">
+        <input id='textField' type="text" name="" value="" placeholder="Ingrese palabra">
+        <div>
+          <button id='submit' class='btns' type="submit" name="button">Guardar y empezar</button>
+          <button id='cancelar' class='btns' type="button" name="button">Cancelar</button>
+        </div>
+      </form>
     </div>
 
 
-    <div class="">
+    <div id='thegame' class="">
+      <div id='tableroCanvas' class="">
+        <canvas id="canvas" style='width: 100%;height: 100%;'></canvas>
+
+      </div>
+      <div id='mostrarPalabra' class="">
+        <div id='spanPalabra'></div>
+        <div id='displayStatusGame'></div>
+        <div id='winORlose' class=""></div>
+
+
+        <div id='btnes' class="">
+          <button id='nuevoJuego' class='btns' type="button" name="button">Nuevo Juego</button>
+          <button id='nuevaPalabra' class='btns' type="button" name="button">Nueva Palabra</button>
+        </div>
+      </div>
 
     </div>
 
