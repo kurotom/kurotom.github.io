@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lapiz.strokeStyle = 'black';
     lapiz.lineWidth = 2;
 
-    // console.log(vida)
+    // console.log(vida) 
     let palabraResponse = document.getElementById('respuesta');
 
     let respuestas = document.querySelectorAll('.answer');
@@ -283,7 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // input cambia color al responder
         inputResponse.style.cssText = `border: 1px solid grey`;
         //
-        
+
         let teclaPresionada = inputResponse.value;
         // console.log(teclaPresionada)
 
