@@ -140,8 +140,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let index = 0;
     arrayWord.forEach((item, posicion) => {
     // arrayWord.forEach(item => {
-      let span = document.createElement('div');
-      span.setAttribute('class', 'answerDiv');
+      let span = document.createElement("div");
+      span.setAttribute("class", "answerDiv");
 
       // if (item === ' ') {
       //   span.innerHTML = `<input class="answer" type="text" name="${index}" maxlength="1" autofocus>`;
@@ -283,6 +283,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // input cambia color al responder
         inputResponse.style.cssText = `border: 1px solid grey`;
         //
+        let r = document.getElementById('respuesta');
+        r.innerText += inputResponse.value;
 
         let teclaPresionada = inputResponse.value;
         // console.log(teclaPresionada)
