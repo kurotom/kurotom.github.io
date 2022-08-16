@@ -1,13 +1,3 @@
-html {
-  background-color: #F3F5FC;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  height: 95vh;
-  padding-top: 5px;
-}
-
 @keyframes win {
   0% {
     rotate: 0deg;
@@ -54,6 +44,18 @@ body {
   }
 }
 
+
+
+html {
+  background-color: #F3F5FC;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  padding-top: 5px;
+}
+
 .winStyle {
   animation-name: win;
   animation-duration: 2s;
@@ -89,13 +91,17 @@ body {
 
 #inicio, #thegame, #insertPalabra{
   display: flex;
-  height: calc(100% - 78px);
-  justify-content: center;
+  height: calc(100% - 125px);
+  justify-content: flex-start;
   align-items: center;
   gap: 10%;
 }
+#inicio {
+  justify-content: center;
+}
 #insertPalabra {
   display: none;
+  justify-content: center;
 }
 #insertPalabra #formWord {
   display: flex;
@@ -115,6 +121,15 @@ body {
   text-align: center;
 }
 
+#respuesta {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 2px 3px brown;
+  letter-spacing: 10px;
+}
+
 #thegame {
   display: none;
   flex-direction: column;
@@ -130,7 +145,7 @@ body {
   flex-direction: column;
   border-bottom: 3px solid gray;
 }
-#thegame #mostrarPalabra #spanPalabra div {
+#thegame #mostrarPalabra #spanPalabra #containerAnswers {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -139,10 +154,28 @@ body {
   font-weight: bold;
   margin-bottom: 4px;
 }
-#thegame #mostrarPalabra #spanPalabra div span {
+#thegame #mostrarPalabra #spanPalabra #containerAnswers .answerDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: 2px solid orange;
   padding: 5px;
   border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  width: 30px;
+}
+#thegame #mostrarPalabra #spanPalabra #containerAnswers .answerDiv .answer, .wordDisabled {
+  width: 100%;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 1px;
+  border: 1px solid gray;
+}
+.wordDisabled {
+  border: none;
 }
 #thegame #mostrarPalabra #displayStatusGame, #thegame #mostrarPalabra #winORlose {
   text-align: center;
@@ -163,6 +196,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  justify-content: center;
 }
 #incorrectas {
   display: flex;
@@ -174,9 +208,9 @@ body {
 
 #tableroCanvas {
   min-width: calc(100% - 40%);
-  min-height: calc(100% - 40%);
-  max-width: calc(100% - 10%);
-  max-height: calc(100% - 10%);
+  min-height: calc(100% - 50%)
+  max-width: calc(100% - 20%);
+  max-height: calc(100% - 50%);
 
   border-radius: 6px;
   border: 6px solid black;

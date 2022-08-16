@@ -44,145 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
   ]
 
 //
-// ahorcado son 10 partes
+// Clase Ahorcado, 10 partes
 //
-  const dibujoAhorcado = (pencil, indexVida, bol) => {
-    const base = () => {
-      // base horca
-      pencil.beginPath();
-      pencil.moveTo(10, 140);
-      pencil.lineTo(110, 140);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const mastil = () => {
-      // mastil horca
-      pencil.beginPath();
-      pencil.moveTo(60, 5)
-      pencil.lineTo(60, 140);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const viga = () => {
-      // viga horca
-      pencil.beginPath();
-      pencil.moveTo(60, 10);
-      pencil.lineTo(210, 10);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const soga = () => {
-      // soga horca
-      pencil.beginPath();
-      pencil.moveTo(200, 10);
-      pencil.lineTo(200, 30);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const cabeza = () => {
-      // cabeza
-      pencil.beginPath();
-      pencil.arc(200, 40, 12, 0, 2 * Math.PI);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const brazo_izquierdo = () => {
-      // brazo Izquierdo
-      pencil.beginPath();
-      pencil.moveTo(200, 52);
-      pencil.lineTo(180, 80);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const torso = () => {
-      // torso
-      pencil.beginPath();
-      pencil.moveTo(200, 52);
-      pencil.lineTo(200, 95);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const brazo_derecho = () => {
-      // brazo derecho
-      pencil.beginPath();
-      pencil.moveTo(200, 52);
-      pencil.lineTo(220, 80);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const pierna_izquierda = () => {
-      // pierna Izquierda
-      pencil.beginPath();
-      pencil.moveTo(200, 95);
-      pencil.lineTo(180, 122);
-      pencil.stroke();
-      pencil.closePath();
-    }
-    const pierna_derecha = () => {
-      // pierna derecha
-      pencil.beginPath();
-      pencil.moveTo(200, 95);
-      pencil.lineTo(215, 122);
-      pencil.stroke();
-      pencil.closePath();
-    }
-
-    console.log('desde dibujoAhorcado', indexVida, bol);
-    // indexVida = 0;
-
-
-    if (indexVida !== -1) {
-      if (indexVida > 9 ) {
-        base();
-      } else if (indexVida > 8) {
-        mastil();
-      } else if (indexVida > 7) {
-        viga();
-      } else if (indexVida > 6) {
-        soga();
-      } else if (indexVida > 5) {
-        cabeza();
-      } else if (indexVida > 4) {
-        brazo_izquierdo();
-      } else if (indexVida > 3) {
-        torso();
-      } else if (indexVida > 2) {
-        brazo_derecho();
-      } else if (indexVida > 1) {
-        pierna_izquierda();
-      } else if (indexVida > 0) {
-        pierna_derecha();
-      }
-    }
-
-  };
-
   class Ahorcado {
     constructor(pencil) {
       this.pencil = pencil
-    }
+    };
     base() {
       this.pencil.beginPath();
       this.pencil.moveTo(10, 140);
       this.pencil.lineTo(110, 140);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
     mastil() {
       this.pencil.beginPath();
       this.pencil.moveTo(60, 5);
       this.pencil.lineTo(60, 140);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
     viga() {
       this.pencil.beginPath();
       this.pencil.moveTo(60, 10);
       this.pencil.lineTo(210, 10);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
-
+    };
     soga()  {
       // soga horca
       this.pencil.beginPath();
@@ -190,14 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
       this.pencil.lineTo(200, 30);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
     cabeza()  {
       // cabeza
       this.pencil.beginPath();
       this.pencil.arc(200, 40, 12, 0, 2 * Math.PI);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
     brazo_izquierdo()  {
       // brazo Izquierdo
       this.pencil.beginPath();
@@ -205,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.pencil.lineTo(180, 80);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
     torso()  {
       // torso
       this.pencil.beginPath();
@@ -213,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.pencil.lineTo(200, 95);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
     brazo_derecho()  {
       // brazo derecho
       this.pencil.beginPath();
@@ -221,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.pencil.lineTo(220, 80);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
     pierna_izquierda()  {
       // pierna Izquierda
       this.pencil.beginPath();
@@ -229,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.pencil.lineTo(180, 122);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
     pierna_derecha()  {
       // pierna derecha
       this.pencil.beginPath();
@@ -237,32 +125,54 @@ document.addEventListener('DOMContentLoaded', () => {
       this.pencil.lineTo(215, 122);
       this.pencil.stroke();
       this.pencil.closePath();
-    }
+    };
+  };
 
-    render() {
-      console.log(this.pencil);
-    }
 
-  }
-
-  const formatoPalabraJuego = (arrayWord) => {
-    console.log(arrayWord)
+  //
+  // Da formato a las palabras secretas formateadas
+  //
+  const formatoPalabraJuego = (arrayWord, original) => {
+    // console.log(arrayWord)
     let div = document.createElement('div');
-    arrayWord.forEach(item => {
-      let span = document.createElement('span');
-      if (item === ' ') {
-        span.innerText = '_';
+    div.setAttribute('id', 'containerAnswers')
+
+    let index = 0;
+    arrayWord.forEach((item, posicion) => {
+    // arrayWord.forEach(item => {
+      let span = document.createElement('div');
+      span.setAttribute('class', 'answerDiv');
+
+      // if (item === ' ') {
+      //   span.innerHTML = `<input class="answer" type="text" name="${index}" maxlength="1" autofocus>`;
+      // } else {
+      //   span.innerText = item;
+      // }
+
+
+      if (original[posicion] === ' ' ) {
+        span.innerHTML = `<input class="wordDisabled" type="text" name="${index}" maxlength="1" disabled>`;
       } else {
-        span.innerText = item;
+
+        if (item === ' ') {
+          span.innerHTML = `<input class="answer" type="text" name="${index}" maxlength="1" autofocus>`;
+        } else {
+          span.innerText = item;
+        }
+
       }
+
       div.appendChild(span);
-    })
+      index++;
+    });
+
     return div.outerHTML;
   }
 
 
   //
-  // funcion palabra secreta
+  // funcion palabra secreta del juego
+  //
   const palabraSecreta = () => {
 
     // funcion para cortar palabras
@@ -270,8 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
       let arrayWord = palabra.split('');
       let palabraProcesada = palabra.split('');
       let letrasQuitadas = [];
-
-      // DEPURAR : NO ENTREGA INDICE CORRECTO LETRA
 
       let i = 1;
       while (i < maximo) {
@@ -285,13 +193,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // console.log(quitada, indiceLetra, arrayWord, palabraProcesada)
 
-          i++;
-        };
-      }
-      // console.log(palabraProcesada)
+        }
+        i++;
 
-      // ordena por indice
-      letrasQuitadas.sort((a, b) => a[1] > b[1]);
+      };
+      // fin funcion
+
+      // Ordena por indice
+      letrasQuitadas.sort((item1, item2) => item1[1] > item2[1]);
+      //
 
       let objetoResultado = {
         'original': palabra,
@@ -309,59 +219,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (selectedWord.length > 6) {
       // quita 4 letras
-      // console.log(cutWord(selectedWord, 4));
       let entregaPalabra4 = cutWord(selectedWord, 5);
       return entregaPalabra4;
-
-    } else if (selectedWord.length > 4 && selectedWord.length <= 6) {
+    }
+    else if (selectedWord.length > 4 && selectedWord.length <= 6) {
       // quita 3 letras
-      // console.log(cutWord(selectedWord, 3));
       let entregaPalabra3 = cutWord(selectedWord, 4);
       return entregaPalabra3;
-
-    } else if (selectedWord.length <= 4) {
+    }
+    else if (selectedWord.length <= 4) {
       // quita 2 letras
-      // console.log(cutWord(selectedWord, 2));
       let entregaPalabra2 = cutWord(selectedWord, 3);
       return entregaPalabra2;
-
-    }
-
+    };
   };
   // end -- funcion palabraSecreta
   //
 
+
+  //
+  // El juego
+  //
   const theGame = (vida, usoCanvas, newWords) => {
     console.log('the game');
 
     if (newWords !== undefined) {
       newWords.forEach(item => {
-        listOfWords.push(item)
+        listOfWords.push(item);
       })
     }
-    console.log(listOfWords)
+    // console.log(listOfWords);
 
     let palabraJuego = palabraSecreta();
-    console.log(palabraJuego)
-
+    // console.log(palabraJuego);
+    // console.log(palabraJuego.original)
 
     let mensajeWinLose = document.getElementById('winORlose');
     mensajeWinLose.innerText = '';
-
 
     //  div palabra formada
     let palabraDisplay = document.getElementById('spanPalabra');
     // palabraDisplay.innerText = palabraJuego.procesada;
 
-    palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada);
-
+    palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada, palabraJuego.original);
 
     let statusGame = document.getElementById('displayStatusGame');
-
-
     let divCanvas = document.getElementById('tableroCanvas');
-    // let pantalla = document.getElementById('canvas');
-    // let lapiz = pantalla.getContext("2d");
     let lapiz = usoCanvas.getContext("2d");
 
     lapiz.fillStyle = 'white';
@@ -371,116 +274,136 @@ document.addEventListener('DOMContentLoaded', () => {
     lapiz.lineWidth = 2;
 
     // console.log(vida)
+    let palabraResponse = document.getElementById('respuesta');
 
-    document.addEventListener('keydown', (evento) => {
+    let respuestas = document.querySelectorAll('.answer');
+    respuestas.forEach(inputResponse => {
 
-      // console.log(palabraJuego.quitadas, evento.key.toUpperCase())
-      let teclaPresionada = evento.key.toUpperCase();
-
-      let xIndex = palabraJuego.quitadas.findIndex(item => item[0] === String(teclaPresionada));
-
-
-      // console.log(xIndex, teclaPresionada)
-      // console.log('--->', palabraJuego.quitadas)
-
-      if (xIndex > -1) {
-        console.log(xIndex, palabraJuego.quitadas[xIndex], teclaPresionada);
-
-        palabraJuego.procesada.splice(palabraJuego.quitadas[xIndex][1], 1, palabraJuego.quitadas[xIndex][0]);
-        palabraJuego.quitadas.splice(xIndex, 1);
-
-        palabraDisplay.innerHTML = formatoPalabraJuego(palabraJuego.procesada);
-
-
-        // console.log(palabraJuego.quitadas, palabraJuego.procesada);
-
-        if (palabraJuego.quitadas.length === 0 && vida > 0) {
-
-          document.removeEventListener('keydown', theGame);
-
-          console.log('FIN DEL JUEGO');
-
-          statusGame.innerText = 'FIN DEL JUEGO';
-
-          mensajeWinLose.innerText = '';
-          mensajeWinLose.setAttribute('class', 'winStyle');
-          mensajeWinLose.innerText = 'Ganaste';
-
-          // DETIENE EL JUEGO
-          vida = null
-          //
-        }
-      } else {
-
-        // console.log('fallo intento', teclaPresionada, palabraJuego.quitadas);
-        // console.log(vida)
-
-        if (vida > -1 && vida !== null) {
-          if (typeof(palabraJuego) !== 'boolean') {
-            let erroneas = document.getElementById('incorrectas');
-            erroneas.innerHTML += `<span>${teclaPresionada}</span>`;
-          }
-        }
-
-        // ACA dibuja una parte del Ahorcado
-        // dibujoAhorcado(lapiz, vida, juegoNuevo);
-        let mono;
-        mono = new Ahorcado(lapiz);
-
-        switch(vida) {
-          case 10:
-            mono.base();
-            break;
-          case 9:
-            mono.mastil();
-            break;
-          case 8:
-            mono.viga();
-            break;
-          case 7:
-            mono.soga();
-            break;
-          case 6:
-            mono.cabeza();
-            break;
-          case 5:
-            mono.torso();
-            break;
-          case 4:
-            mono.brazo_izquierdo();
-            break;
-          case 3:
-            mono.brazo_derecho();
-            break;
-          case 2:
-            mono.pierna_izquierda();
-            break;
-          case 1:
-            mono.pierna_derecha();
-            break;
-        };
-
+      inputResponse.addEventListener('input', () => {
+        // input cambia color al responder
+        inputResponse.style.cssText = `border: 1px solid grey`;
         //
 
-        if (vida === 0) {
+        let teclaPresionada = inputResponse.value;
+        // console.log(teclaPresionada)
 
-          document.removeEventListener('keydown', theGame);
+        if (Object.keys(keyCodesWord).includes(teclaPresionada)) {
 
-          console.log('FIN DEL JUEGO');
+          teclaPresionada = teclaPresionada.toUpperCase();
 
-          statusGame.innerText = 'FIN DEL JUEGO';
+          let xIndex = palabraJuego.quitadas.findIndex(item => item[0] === String(teclaPresionada));
 
-          mensajeWinLose.innerText = '';
-          mensajeWinLose.setAttribute('class', 'loserStyle')
-          mensajeWinLose.innerText = 'Perdiste';
+          // console.log(xIndex, palabraJuego.quitadas[xIndex], teclaPresionada);
 
-          vida = null
-        }
-        vida--;
-      }
+          if (xIndex > -1) {
+            // console.log(xIndex, palabraJuego.quitadas[xIndex], teclaPresionada);
+            // console.log(
+            //   parseInt(inputResponse.name), palabraJuego.quitadas[xIndex], palabraJuego.quitadas[xIndex][1]
+            // );
 
-    }, false)
+            if (parseInt(inputResponse.name) === palabraJuego.quitadas[xIndex][1]) {
+              palabraJuego.procesada.splice(palabraJuego.quitadas[xIndex][1], 1, palabraJuego.quitadas[xIndex][0]);
+              palabraJuego.quitadas.splice(xIndex, 1);
 
+              inputResponse.disabled = true;
+            };
+
+            // console.log(palabraJuego.quitadas, palabraJuego.procesada);
+
+            if (palabraJuego.quitadas.length === 0 && vida >= 0) {
+
+              palabraResponse.innerText = palabraJuego.original;
+
+              console.log('FIN DEL JUEGO');
+
+              statusGame.innerText = 'FIN DEL JUEGO';
+
+              mensajeWinLose.innerText = '';
+              mensajeWinLose.setAttribute('class', 'winStyle');
+              mensajeWinLose.innerText = 'Ganaste';
+
+              // DETIENE EL JUEGO
+              vida = null;
+              //
+            };
+          } else {
+
+            // console.log('fallo intento', teclaPresionada, palabraJuego.quitadas);
+            // console.log(vida)
+
+            // input cambia color al responder
+            inputResponse.style.cssText = `outline: 7px solid red;`;
+            //
+
+            if (vida > -1 && vida !== null) {
+              if (typeof(palabraJuego) !== 'boolean') {
+                let erroneas = document.getElementById('incorrectas');
+                erroneas.innerHTML += `<span>${teclaPresionada}</span>`;
+              };
+            };
+
+            let mono;
+            mono = new Ahorcado(lapiz);
+
+            switch(vida) {
+              case 10:
+                mono.base();
+                break;
+              case 9:
+                mono.mastil();
+                break;
+              case 8:
+                mono.viga();
+                break;
+              case 7:
+                mono.soga();
+                break;
+              case 6:
+                mono.cabeza();
+                break;
+              case 5:
+                mono.torso();
+                break;
+              case 4:
+                mono.brazo_izquierdo();
+                break;
+              case 3:
+                mono.brazo_derecho();
+                break;
+              case 2:
+                mono.pierna_izquierda();
+                break;
+              case 1:
+                mono.pierna_derecha();
+                break;
+            };
+
+            //
+
+            if (vida === 0) {
+              console.log('FIN DEL JUEGO');
+
+              palabraResponse.innerText = palabraJuego.original;
+
+              statusGame.innerText = 'FIN DEL JUEGO';
+
+              mensajeWinLose.innerText = '';
+              mensajeWinLose.setAttribute('class', 'loserStyle');
+              mensajeWinLose.innerText = 'Perdiste';
+
+              respuestas.forEach(item => {
+                item.disabled = true;
+              });
+
+              vida = null;
+            };
+
+            vida--;
+
+          };
+        };
+      });
+    });
   };
 
 
@@ -505,10 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
       screenInicio.style.display = 'flex';
       screenWords.style.display = 'none';
       screenGame.style.display = 'none';
-
-      document.removeEventListener('keydown', theGame);
-
-    })
+    });
 
     form.addEventListener('submit', (evento) => {
       evento.preventDefault();
@@ -518,46 +438,31 @@ document.addEventListener('DOMContentLoaded', () => {
       if (texto.value.trim() !== '') {
         // listOfWords.push(texto.value.toUpperCase())
 
-        palabrasNuevas.push(texto.value.toUpperCase())
+        palabrasNuevas.push(texto.value.toUpperCase());
 
         texto.value = '';
 
         // console.log('new list words-->', listOfWords);
         console.log('words-->', palabrasNuevas);
 
-        // screenWords.style.display = 'none';
-        // screenGame.style.display = 'flex';
+        let faltan = palabrasNuevas.filter(item => {
+          if (listOfWords.includes(item) === false) {
+            return item;
+          }
+        });
+        faltan.map(item => {
+          listOfWords.push(item)
+        })
+        // console.log(listOfWords, faltan)
 
-        // let erroneas = document.getElementById('incorrectas');
-        // erroneas.innerHTML = '';
-
-        // document.removeEventListener('keydown', theGame);
-        //
-        // let divCanvas = document.getElementById('tableroCanvas');
-        // divCanvas.innerHTML = '';
-        //
-        // let canvas = document.createElement('canvas');
-        // canvas.setAttribute('id', 'canvas');
-        // canvas.style.cssText = `
-        //   width: 100%;
-        //   height: 100%;
-        // `
-        // divCanvas.appendChild(canvas);
-        //
-        // let inicioVida = 10;
-        // theGame(inicioVida, canvas);
-
-
-        window.sessionStorage.setItem('palabras', JSON.stringify(palabrasNuevas));
-
-        window.sessionStorage.setItem('reload', true)
-
+        window.sessionStorage.setItem('palabras', JSON.stringify(listOfWords));
+        window.sessionStorage.setItem('reload', true);
         window.location.reload();
 
       } else {
         texto.value = '';
       }
-    })
+    });
   };
 
 
@@ -576,25 +481,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (JSON.parse(window.sessionStorage.getItem("reload")) !== null) {
     window.sessionStorage.removeItem('reload');
 
-    console.log('RELOAD----->')
+    // console.log('RELOAD----->');
 
     screenInicio.style.display = 'none';
     screenWords.style.display = 'none';
     screenGame.style.display = 'flex';
 
-    document.removeEventListener('keydown', theGame);
-
     let canvAs = document.getElementById('canvas');
 
     let inicioVida = 10;
     let words  = JSON.parse(window.sessionStorage.getItem('palabras'));
+    // console.log(words);
+
     if (words !== null) {
-      theGame(inicioVida, canvAs, words);
+      let faltantes = words.filter(item => {
+        if (listOfWords.includes(item) === false) {
+          return item
+        }
+      });
+      // console.log('---->>>>', faltantes)
+
+      theGame(inicioVida, canvAs, faltantes);
       window.sessionStorage.removeItem('palabras')
     }
     theGame(inicioVida, canvAs);
-
-
   };
   //    ////    //  //    ////    //  //    ////    //
   //    ////    //  //    ////    //  //    ////    //
@@ -602,10 +512,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btnNuevoJuego.addEventListener('click', () => {
 
-    window.sessionStorage.setItem('reload', true)
+    // console.log()
+    // console.log(listOfWords)
+    // console.log()
+    let antiguas  = JSON.parse(window.sessionStorage.getItem('palabras'));
+    console.log(antiguas)
+    if (antiguas !== null) {
+      window.sessionStorage.removeItem('palabras')
+      window.sessionStorage.setItem('palabras', JSON.stringify(listOfWords));
+    } else {
+      window.sessionStorage.setItem('palabras', JSON.stringify(listOfWords));
+    }
+
+    window.sessionStorage.setItem('reload', true);
 
     window.location.reload();
-  })
+  });
 
 
   btnStart.addEventListener('click', () => {
@@ -613,24 +535,20 @@ document.addEventListener('DOMContentLoaded', () => {
     screenWords.style.display = 'none';
     screenGame.style.display = 'flex';
 
-    document.removeEventListener('keydown', theGame);
-
     let can = document.getElementById('canvas');
 
     let inicioVida = 10;
     theGame(inicioVida, can);
 
-  })
+  });
 
 
   nuevaPalabra.addEventListener('click', () => {
-    document.removeEventListener('keydown', theGame, true);
     manejoNuevaPalabra();
-  })
+  });
 
   btnAddWord.addEventListener('click', () => {
-    document.removeEventListener('keydown', theGame, true);
     manejoNuevaPalabra();
-  })
+  });
 
 });
