@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let teclaPresionada = inputResponse.value;
         // console.log(teclaPresionada)
 
-        if (Object.keys(keyCodesWord).includes(teclaPresionada)) {
+        if (Object.keys(keyCodesWord).includes(teclaPresionada.toLowerCase())) {
 
           teclaPresionada = teclaPresionada.toUpperCase();
 
