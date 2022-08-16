@@ -284,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
         inputResponse.style.cssText = `border: 1px solid grey`;
         //
         let r = document.getElementById('respuesta');
-        r.innerText += [inputResponse.value, Object.keys(keyCodesWord).includes(teclaPresionada)];
+        r.innerText += [inputResponse.value, Object.keys(keyCodesWord).includes(inputResponse.value)];
 
         let teclaPresionada = inputResponse.value;
         // console.log(teclaPresionada)
