@@ -2,81 +2,652 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Tomás Valdivia Fuentes</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/creditos.css">
 
-    <title>Kurotom</title>
+    <link rel="stylesheet" href="./assets/css/portafolio.css">
+    <link rel="stylesheet" href="./assets/css/portafolio-inicio.css">
+    <link rel="stylesheet" href="./assets/css/portafolio-about.css">
+    <link rel="stylesheet" href="./assets/css/portafolio-skills.css">
+    <link rel="stylesheet" href="./assets/css/portafolio-formacion.css">
+    <link rel="stylesheet" href="./assets/css/portafolio-proyectos.css">
+
+
+    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Chakra+Petch:wght@400&display=swap" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+
+
+
+    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="text/javascript" src="./assets/js/totop.js"></script>
+    <script type="text/javascript" src="./assets/js/dateCopyright.js"></script>
   </head>
-
   <body>
 
-    <div id='sorry' class="">
-      <p class="h3">Esto es vergonsozo</p>
-      <p>Estoy construyendo esta página</p>
-      <p>Pero puede ver algunos de mis proyectos listados a continuación o ir a mi
-        <a href="https://github.com/kurotom" target="_blank">página principal GitHub</a>
-      </p>
-    </div>
-
-
-    <div id='gif'>
-      <img src="https://media2.giphy.com/media/hV1dkT2u1gqTUpKdKy/giphy.gif?cid=790b76114574d8b4b72a654c13873731b56f8d9f4bd18382&rid=giphy.gif&ct=g" alt="AGLO">
-      <span>
-        <a href="https://giphy.com/embed/hV1dkT2u1gqTUpKdKy">@kipparchitecture - giphy.com</a>
-      </span>
-    </div>
-
-
-    <div id="lista" class="container">
-      <p>Listado de proyectos realizados en el programa
-        <a href="https://www.oracle.com/cl/education/oracle-next-education/" target="_blank">
-          Oracle ONE
+    <nav id="navbar" class="" data-navbar>
+      <div id="me" class="">
+        <a id="" href="/">
+          Tomás
         </a>
-      </p>
+      </div>
+      <ul id="navbar__lista">
+        <li class="navbar__lista-item">
+          <a class="navbar__lista-link" href="#portafolio__hello">
+            Sobre mí
+          </a>
+        </li>
+        <li class="navbar__lista-item">
+          <a class="navbar__lista-link" href="#portafolio__skills-hobbies">
+            Skills
+          </a>
+        </li>
+        <li class="navbar__lista-item">
+          <a class="navbar__lista-link" href="#portafolio__formacion">
+            Formación
+          </a>
+        </li>
+        <li class="navbar__lista-item">
+          <a class="navbar__lista-link" href="#portafolio__proyectos">
+            Proyectos
+          </a>
+        </li>
+        <li class="navbar__lista-item">
+          <a class="navbar__lista-link" href="#portafolio__contacto">
+            Contacto
+          </a>
+        </li>
+      </ul>
 
-      <table class="table table-dark table-hover table-striped-columns">
-        <thead>
-          <tr>
-            <th scope="col" colspan="2">
-              Proyectos Alura - Oracle ONE
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">
-              1
-            </th>
-            <td>
-              <a href="proyectos/encriptador/encriptador.html" target="_blank">Desafío 1 - Encriptador - Alura</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">
-              2
-            </th>
-            <td>
-              <a href="proyectos/juego_ahorcado/juego_ahorcado.html" target="_blank">Desafío 2 - Juego ahoracado</a>
-            </td>
-          </tr>
+    </nav>
 
-          <tr>
-            <th scope="row">
 
-            </th>
-            <td>
-              <a href="#" target="_blank">Esta historia continuará...</a>
-            </td>
-          </tr>
+    <main id="portafolio" class="" data-portafolio>
 
-        </tbody>
-      </table>
-    </div>
+      <div id="totop" class="">
+        <i class="fa-solid fa-caret-up fa-3x"></i>
+      </div>
 
+      <section id="portafolio__inicio">
+
+        <div id="portafolio__inicio-info" class="">
+          <h1>
+            Tomás Valdivia Fuentes
+          </h1>
+          <span>
+            Desarrollador Python y Web
+          </span>
+          <span>
+            Construyo herramientas tecnológicas utilizando Python y JavaScript.
+            Me gusta aprender nuevos temas y aplicarlos, la tecnología me fascina.
+          </span>
+        </div>
+
+        <div id="portafolio__inicio-imagen" class="">
+          <img src="" alt="FOTO MiA">
+        </div>
+
+      </section>
+
+
+      <!-- SOBRE MI -->
+      <section id="portafolio__hello">
+        <h1>Sobre mí</h1>
+        <p>
+          Hola, mi nombre es Tomás, disfruto crear herramientas y soluciones tecnológicas con el objetivo de resolver problemas.
+        </p>
+        <p>
+          Utilizo lenguajes de programación Python y JavaScript, base de datos (SQLite, PostgreSQL, MongoDB).
+          Además creo herramientas de escritorio con entorno gráfico utilizado Tkinter, en el desarrollo web utilizo framework Django para backend (lado del servidor), Django Rest Framework para la creación de APIs y para el frontend (lado del cliente) uso la librería React, además de HTML, CSS y Bootstrap.
+        </p>
+        <p>
+          Utilizo Git para controlar mi código, mis trabajos están alojados en <a href="https://github.com/kurotom">Github</a>.<br>
+          Además tengo conocimientos en análisis de datos con Python utilizando Numpy, Pandas, Matplotlib, and Seaborn para procesar y visualizar datos, web scraping.
+        </p>
+        <p>
+          Formándome contínuamente y mejorando mis habilidades como desarrollador, aportar mis conocimientos a la creación soluciones según los requerimientos, trabajando en equipo para lograr los objetivos.
+        </p>
+
+      </section>
+      <!-- SOBRE MI -->
+
+
+      <!-- SKILLS-HOBBIES -->
+      <section id="portafolio__skills-hobbies">
+
+        <div id="portafolio__skills-hobbies-skill" class="">
+          <h1>Skills</h1>
+
+          <div id="" class="sections-skills">
+            <div class="sections-skills-head">
+              <p>
+                Lenguajes de programación
+              </p>
+              <p>
+                Conjunto de instrucciones cuya sintáxis y reglas permiten la comunicación entre el programador y la computadora logrando realizar acciones determinadas.
+              </p>
+            </div>
+
+            <ul>
+              <li>
+                Python
+                <i class="fa-brands fa-python fa-xl"></i>
+              </li>
+              <li>
+                JavaScript
+                <i class="fa-brands fa-js fa-xl"></i>
+              </li>
+            </ul>
+
+          </div>
+
+
+
+
+          <div  class="sections-skills">
+            <div class="sections-skills-head">
+              <p>
+                Desarrollo Web - Backend
+              </p>
+              <p>
+                Código por el lado del servidor, creación de APIs, manejo de usuario, seguridad, entre otros.
+              </p>
+            </div>
+
+            <ul>
+              <li>
+                Django
+                <i class="fa-solid fa-code fa-xl"></i>
+              </li>
+              <li>
+                Django-Rest-Framework
+                <i class="fa-solid fa-code fa-xl"></i>
+              </li>
+              <li>
+                Base de datos
+                <i class="fa-solid fa-database fa-xl"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div  class="sections-skills">
+            <div class="sections-skills-head">
+              <p>
+                Desarrollo Web - Frontend
+              </p>
+              <p>
+                Código por el lado del cliente, permite a los usuarios la visualización e interacción de la página web.
+              </p>
+            </div>
+
+            <ul>
+              <li>
+                React
+                <i class="fa-brands fa-react fa-xl"></i>
+              </li>
+              <li>
+                HTML
+                <i class="fa-brands fa-html5 fa-xl"></i>
+              </li>
+              <li>
+                CSS
+                <i class="fa-brands fa-css3-alt fa-xl"></i>
+              </li>
+              <li>
+                Bootstrap
+                <i class="fa-brands fa-bootstrap fa-xl"></i>
+              </li>
+            </ul>
+          </div>
+
+          <div  class="sections-skills">
+            <div class="sections-skills-head">
+              <p>
+                Otras herramienta, librerías y frameworks que utilizo
+              </p>
+              <p></p>
+            </div>
+            <ul>
+              <li>
+                Git
+                <i class="fa-brands fa-git fa-xl"></i>
+              </li>
+              <li>
+                Github
+                <i class="fa-brands fa-github fa-xl"></i>
+              </li>
+              <li>
+                Atom
+                <i class="fa-solid fa-atom fa-xl"></i>
+              </li>
+              <li>Tkinter</li>
+              <li>Selenium</li>
+              <li>Requests</li>
+              <li>Vercel</li>
+              <li>Render</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div id="portafolio__skills-hobbies-hobbies" class="">
+          <h1>Hobbies</h1>
+          <div id="portafolio__skills-hobbies-content" class="">
+            <div class="">
+              <span class="icons">&#127909;</span>
+              <p>
+                Disfruto ver películas, siendo la trilogía de <span>El Señor de los anillos</span> mi favorita.
+              </p>
+            </div>
+            <div class="">
+              <span class="icons">&#127928;</span>
+              <p>
+                Escuchar música como rock, metal, no me cierro a los otros géneros musicales (excepto la música urbana y derivados).
+              </p>
+            </div>
+            <div class="">
+              <span class="icons">&#127918;</span>
+              <p>
+                Videojuegos en general, teniendo como favorito a Fallout por su historias y ambiente.
+              </p>
+            </div>
+            <div class="">
+              <span class="icons">&#9749;</span>
+              <p>
+                Me gustan los entornos verdes. Tomár un café acompañado con un brownie es algo insuperable.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- SKILLS-HOBBIES -->
+
+
+      <!-- FORMACION -->
+      <section id="portafolio__formacion">
+        <h1>Formación</h1>
+        <div id="portafolio__formacion-div" class="">
+          <div class="">
+            <p>Estudio </p>
+            <ul>
+              <li>
+                <a href="#">
+                  Administración de Redes Computacionales - Duoc UC - 2018
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="">
+            <p>Estudios complementarios</p>
+            <ul>
+
+              <li>
+                Formación Principiantes de la programación - 2022
+              </li>
+              <li>
+                Formación Front-End - 2022
+              </li>
+              <li>
+                Formación Desarrollo Personal - 2022
+              </li>
+
+
+              <li>
+                <a href="https://freecodecamp.org/certification/tomvalfue/scientific-computing-with-python-v7">
+                  Computación científica con Python - Freecodecamp - 2020
+                </a>
+              </li>
+              <li>
+                <a href="https://freecodecamp.org/certification/tomvalfue/data-analysis-with-python-v7">
+                  Análisis de Datos con Python - Freecodecamp - 2020
+                </a>
+              </li>
+              <li>
+                <a href="https://www.freecodecamp.org/certification/tomvalfue/javascript-algorithms-and-data-structures">
+                  JavaScript Algoritmos y Estructura de Datos - Freecodecamp - 2022
+                </a>
+              </li>
+              <li>
+                <a href="https://www.freecodecamp.org/certification/tomvalfue/front-end-development-libraries">
+                  Front End Development Libraries - Freecodecamp - 2022
+                </a>
+              </li>
+              <li>
+                <a href="https://www.freecodecamp.org/certification/tomvalfue/responsive-web-design">
+                  Responsive Web Design - Freecodecamp - 2020
+                </a>
+              </li>
+
+              <li>
+                <a href="https://www.hackerrank.com/certificates/1887d9f7fb19">
+                  SQL básico - HackerRank - 2022
+                </a>
+              </li>
+              <li>
+                <a href="https://www.hackerrank.com/certificates/21186dac76e0">
+                  Python - HackerRank - 2022
+                </a>
+              </li>
+
+              <li>
+                CS50's Web Programming with Python and JavaScript - edx.org - 2022
+              </li>
+
+              <li>
+                <a href="https://university.mongodb.com/course_completion/bea0603c-fd6f-4876-84f5-4e57c739e3c1?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing">
+                  MongoDB Basics - MongoDB Courses - 2021
+                </a>
+              </li>
+              <li>
+                <a href="https://university.mongodb.com/course_completion/ef2060f9-a0d1-4eba-811d-60f0ceb12274?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing">
+                  Basic Cluster Administration - MongoDB Courses - 2021
+                </a>
+              </li>
+              <li>
+                <a href="https://university.mongodb.com/course_completion/bea0603c-fd6f-4876-84f5-4e57c739e3c1?utm_source=copy&utm_medium=social&utm_campaign=university_social_sharing">
+                  MongoDB for Python Developers - MongoDB Courses - 2021
+                </a>
+              </li>
+
+              <li>
+                Automatización con Python - Coursera 2019 - auditado
+              </li>
+              <li>
+                Git - Github - Coursera 2019- auditado
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </section>
+      <!-- FORMACION -->
+
+
+      <!-- PROYECTOS -->
+      <section id="portafolio__proyectos">
+
+        <h1>Proyectos</h1>
+
+        <div class="proyectos">
+          <div class="proyectos__head">
+            <p>Desktop Apps</p>
+            <p>Utilizando lenguaje Python, Tkinter para entorno gráfico y paquetes como Selenium, Requests, BeautifulSoup, entre otros.</p>
+          </div>
+          <ul class="proyectos__creados">
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/PyMoDoRo" target="_blank">
+                <span>Pomodoro</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/scraping_Sismologia_cl" target="_blank">
+                <span>Scraping Sismología.cl</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/GUI_compressorPDF" target="_blank">
+                <span>Compresor PDF - GUI</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/gui_image_compress" target="_blank">
+                <span>Compresor Imágenes - GUI</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/Html_to_PDF" target="_blank">
+                <span>Html to PDF</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/Merge_PDF_GUI" target="_blank">
+                <span>Merge PDF - GUI</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/Tic_Tac_Toe" target="_blank">
+                <span>Tic Tac Toe</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/Hangman_Game" target="_blank">
+                <span>Hangman Game</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/proyectos_varios/tree/main/Coffee_Machine" target="_blank">
+                <span>Coffee Machine</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+
+        <div class="proyectos">
+          <div class="proyectos__head">
+            <p>Frontend</p>
+            <p>Utilizando JavaScript, React, Redux, HTML, CSS, Bootstrap</p>
+          </div>
+          <ul class="proyectos__creados">
+            <li>
+              <a href="https://github.com/kurotom/Portafolio_Web_Development/tree/weatherApp_react" target="_blank">
+                <span>Weather app</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/Portafolio_Web_Development/tree/piano_react" target="_blank">
+                <span>Piano app</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/Portafolio_Web_Development/tree/calculator_react" target="_blank">
+                <span>Calculator app</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/Portafolio_Web_Development/tree/contador_react_redux" target="_blank">
+                <span>Contador React Redux</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/encriptador_challenge1" target="_blank">
+                <span>Encriptador</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/challenge2_juego_JS" target="_blank">
+                <span>Hangman game</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+
+        <div class="proyectos">
+          <div class="proyectos__head">
+            <p>Desarrollo web</p>
+            <p>Creación de aplicaciones web fullstack, usando Django para backend y React-Redux para frontend.</p>
+          </div>
+          <ul class="proyectos__creados">
+            <li>
+              <a href="https://github.com/kurotom/Portafolio_Web_Development/tree/thelittlemarket" target="_blank">
+                <span>The Little Market - Ecommerce</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/Portafolio_Web_Development/tree/movieApp" target="_blank">
+                <span>MovieApp</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/Portafolio_Web_Development/tree/walletkeep" target="_blank">
+                <span>WalletKeep<span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/Portafolio_Web_Development/tree/compressPDF" target="_blank">
+                <span>CompressPDF</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/cs50W_proyectos/tree/main/network" target="_blank">
+                <span>Network App</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/cs50W_proyectos/tree/main/mail" target="_blank">
+                <span>Email App</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/kurotom/cs50W_proyectos/tree/main/commerce" target="_blank">
+                <span>Auctions App</span>
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </section>
+      <!-- PROYECTOS -->
+
+
+      <!-- FORMULARIO CONTACTO -->
+      <section id="portafolio__contacto">
+
+        <p>Pongámonos en contacto</p>
+        <span>¿Tienes alguna idea en mente?, conversemos y trabajemos para que se haga realidad.</span>
+
+        <form id="formulario" class="" action="index.html" method="post" data-formulario>
+
+          <fieldset id="formulario__div-nombre" class="formulario_div">
+            <legend id="formulario__div-span-nombre">Nombre</legend>
+            <input id="nombreInput" class="formulario_div-input" type="text" name="" value="" required data-nombre>
+          </fieldset>
+
+
+          <fieldset id="formulario__div-email" class="formulario_div">
+            <legend id="formulario__div-span-email">Email</legend>
+            <input id="emailInput" class="formulario_div-input" type="email" name="" value=""  required data-email>
+          </fieldset>
+
+          <fieldset id="formulario__div-mensaje"  class="formulario_div">
+              <legend id="formulario__div-span-mensaje" >Escriba su mensaje</legend>
+              <textarea id="mensajeTextarea" name="name" rows="" cols="" required data-mensaje></textarea>
+          </fieldset>
+
+          <div id="formulario__div-boton" class="formulario_div">
+            <button type="submit" name="button">Enviar</button>
+          </div>
+
+        </form>
+
+      </section>
+      <!-- FORMULARIO CONTACTO -->
+
+    </main>
+
+
+
+    <footer id="footer" class="">
+
+      <div id="footer__social" >
+
+        <div class="">
+          <p>Curriculum</p>
+          <div class="">
+            <a href="curriculum.html" target="_blank" title="Ver Online">
+              <i class="fa-solid fa-book-open-reader fa-xl"></i>
+              Ver
+            </a>
+            <a href="/assets/cv/Tomas_Valdivia_Fuentes-Curriculum.pdf" title="Descargar" target="_blank" download>
+              <i class="fa-solid fa-download fa-xl"></i>
+              Descargar
+            </a>
+          </div>
+        </div>
+
+        <ul id="footer__ul">
+          <li id="footer__ul-li">
+            <a class="footer__ul-li-a" href="https://www.linkedin.com/in/tomas-valdivia-fuentes-596420227" title="Visita mi Linkdin" target="_blank">
+              <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+          </li>
+          <li id="footer__ul-li">
+            <a class="footer__ul-li-a" href="https://github.com/kurotom" title="Visita mi repositorio"  target="_blank">
+              <i class="fa-brands fa-github fa-2x"></i>
+            </a>
+          </li>
+          <li>
+          </li>
+        </ul>
+
+        <span>
+          email@development.com
+        </span>
+
+      </div>
+
+      <section id="footer__copyright" data-footer-copyright>
+        <p id="footer__copyright-p">
+          <span>
+            Tomás Daniel Valdivia Fuentes
+          </span>
+          <span>
+            Desarrollador Python y web
+          </span>
+        </p>
+
+        <a href="creditos.html" id="footer__copyright-credits" class=""  target="_blank" data-copyright>
+          <span>Créditos</span>
+          <p class="">
+            <span>&#169;</span>
+            <span id="" class="" data-year-copyright></span>
+          </p>
+        </a>
+      </section>
+
+    </footer>
 
   </body>
 </html>

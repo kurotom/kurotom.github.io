@@ -1,0 +1,17 @@
+:root {
+  --web-font: 'Chakra Petch', sans-serif;
+  --title-font: 'Abril Fatface', cursive;
+  --size-title: 32px;
+  --size-items: 19px;
+
+  --size-title-content: 26px;
+  --size-content: 17px;
+
+  --size-ul-skills: 19px;
+
+
+  line-height: 0.5cm;
+
+  scroll-behavior: smooth;
+
+}

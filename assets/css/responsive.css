@@ -1,0 +1,568 @@
+@media screen and (max-width: 506px) {
+
+  #totop {
+    width: 100% !important;
+  }
+  #totop i {
+    left: -25px;
+  }
+
+  #navbar {
+    flex-direction: column;
+    height: auto !important;
+    padding-bottom: 10px !important;
+  }
+  #navbar #me {
+    justify-content: center !important;
+    margin: 1rem 0 1rem 0;
+  }
+  #navbar__lista {
+    justify-content: center !important;
+    margin: 0 !important;
+    width: auto !important;
+  }
+
+  #portafolio__inicio {
+    max-width: 20rem;
+    flex-direction: column;
+    height: auto;
+    padding-top: 4rem;
+    row-gap: 2rem;
+  }
+
+  #portafolio__inicio-info {
+    height: 80%;
+    width: auto;
+    text-align: center;
+  }
+
+
+  #portafolio__inicio-imagen {
+    height: auto;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  #portafolio__inicio-info span:nth-child(3) {
+    width: auto;
+  }
+
+
+
+  #portafolio__hello {
+    width: 20rem;
+    height: auto;
+    padding-top: 2rem;
+  }
+
+  #portafolio__hello p {
+    line-height: 0.7cm;
+    padding: 0.5rem;
+
+  }
+
+
+
+  #portafolio__skills-hobbies {
+    width: 20rem;
+
+  }
+
+
+  .sections-skills ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    row-gap: 1rem;
+  }
+
+  #portafolio__formacion {
+    width: 20rem;
+
+  }
+
+  #portafolio__formacion-div {
+    flex-direction: column;
+    row-gap: 2rem;
+
+  }
+
+  #portafolio__formacion-div div:nth-child(1) {
+    padding: 0px;
+
+  }
+
+  #portafolio__formacion-div div:nth-child(2) ul li {
+    margin-bottom: 12px;
+
+  }
+
+
+
+  #portafolio__proyectos {
+    width: 20rem;
+    margin-top: 14rem;
+
+  }
+
+
+
+  .proyectos__head {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+
+  }
+
+
+  .proyectos__creados {
+    grid-template-columns: repeat(2, 50%);
+
+  }
+
+
+
+  #portafolio__contacto {
+    width: 20rem;
+  }
+
+  #formulario {
+    width: auto;
+  }
+
+  .formulario_div {
+    padding: 0px;
+
+  }
+
+  #footer__social {
+    width: 100%;
+  }
+
+  #footer__social div:nth-child(1) {
+    width: 100%;
+  }
+
+  #footer__ul {
+    width: 100%;
+  }
+  #footer div span {
+    text-align: center;
+    width: 100%;
+  }
+
+  #footer__copyright {
+    width: auto;
+  }
+}
+
+
+
+@media screen and (min-width: 506px) and (max-width: 510px) {
+  #totop {
+    width: 100% !important;
+  }
+  #totop i {
+    left: -10px;
+  }
+
+  #navbar #navbar__lista {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  #portafolio__inicio {
+    width: 100%;
+    /* height: 50vh; */
+    flex-direction: column;
+
+  }
+
+  #portafolio__inicio-info {
+    height: 50%;
+    width: auto;
+  }
+
+  #portafolio__inicio-imagen {
+    padding: 0;
+    align-items: normal;
+    height: auto;
+
+  }
+
+  #portafolio__inicio-info span:nth-child(3) {
+    width: auto;
+    text-align: center;
+
+  }
+
+
+  #portafolio__hello {
+    height: auto !important;
+    width: auto;
+    padding-top: 1rem;
+  }
+
+
+  #portafolio__skills-hobbies {
+    width: auto;
+    padding-top: 1rem;
+    height: auto !important;
+  }
+
+  #portafolio__skills-hobbies-hobbies {
+    height: 30vh;
+
+  }
+
+
+  #portafolio__formacion {
+    width: auto;
+    height: auto !important;
+  }
+
+  #portafolio__formacion-div {
+    flex-direction: column;
+
+  }
+
+  #portafolio__formacion-div div:nth-child(1) {
+    padding: 0px;
+
+  }
+
+  #portafolio__formacion-div div:nth-child(2) {
+    margin-top: 2rem;
+
+  }
+
+  #portafolio__proyectos {
+    margin-bottom: 10rem;
+    width: auto;
+    margin-top: 7rem;
+
+  }
+
+
+  .proyectos__head {
+    flex-direction: column;
+    height: auto;
+
+  }
+
+  .proyectos__head p:nth-child(2) {
+    width: auto;
+
+  }
+
+  .proyectos__creados {
+    grid-template-columns: repeat(2, 47%);
+
+  }
+
+
+  #portafolio__contacto {
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    margin-top: 10rem;
+  }
+
+  #formulario {
+    width: auto;
+
+  }
+
+
+
+
+  #footer__social {
+    width: 100%;
+  }
+
+  #footer__social div:nth-child(1) {
+    width: 100%;
+  }
+
+  #footer__ul {
+    width: 100%;
+  }
+  #footer div span {
+    text-align: center;
+    width: 100%;
+  }
+
+  #footer__copyright {
+    width: auto;
+  }
+
+}
+
+@media screen and (min-width: 510px) and (max-width: 810px) {
+  #totop {
+    width: 100% !important;
+  }
+  #totop i {
+    left: -10px;
+  }
+
+  #navbar #navbar__lista {
+    /* display: grid;
+    grid-template-columns: repeat(2, auto); */
+  }
+
+  #portafolio__inicio {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    row-gap: 3rem;
+    padding-top: 1rem;
+
+  }
+
+  #portafolio__inicio-info {
+    height: 50%;
+    width: auto;
+  }
+
+  #portafolio__inicio-imagen {
+    padding: 0;
+    align-items: normal;
+    height: auto;
+
+  }
+
+  #portafolio__inicio-info span:nth-child(3) {
+    width: auto;
+    text-align: center;
+
+  }
+
+
+  #portafolio__hello {
+    height: auto !important;
+    width: auto;
+    padding-top: 1rem;
+  }
+
+
+  #portafolio__skills-hobbies {
+    width: auto;
+    padding-top: 1rem;
+    height: auto !important;
+  }
+
+  #portafolio__skills-hobbies-hobbies {
+    height: 30vh;
+
+  }
+
+
+  #portafolio__formacion {
+    width: auto;
+    height: auto !important;
+  }
+
+  #portafolio__formacion-div {
+    flex-direction: column;
+
+  }
+
+  #portafolio__formacion-div div:nth-child(1) {
+    padding: 0px;
+
+  }
+
+  #portafolio__formacion-div div:nth-child(2) {
+    margin-top: 2rem;
+
+  }
+
+  #portafolio__proyectos {
+    margin-bottom: 10rem;
+    width: auto;
+    margin-top: 7rem;
+
+  }
+
+
+  .proyectos__head {
+    flex-direction: column;
+    height: auto;
+
+  }
+
+  .proyectos__head p:nth-child(2) {
+    width: auto;
+
+  }
+
+  .proyectos__creados {
+    grid-template-columns: repeat(2, 47%);
+
+  }
+
+
+  #portafolio__contacto {
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    margin-top: 10rem;
+  }
+
+  #formulario {
+    width: auto;
+
+  }
+
+
+
+
+  #footer__social {
+    width: 100%;
+  }
+
+  #footer__social div:nth-child(1) {
+    width: 100%;
+  }
+
+  #footer__ul {
+    width: 100%;
+  }
+  #footer div span {
+    text-align: center;
+    width: 100%;
+  }
+
+  #footer__copyright {
+    width: auto;
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 810px) and (max-width: 1000px) {
+  #totop {
+    width: 100% !important;
+  }
+  #totop i {
+    left: -10px;
+  }
+
+  #portafolio__inicio {
+    width: 100%;
+    height: 50vh;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #portafolio__inicio-info {
+    height: auto;
+    width: auto;
+  }
+
+  #portafolio__inicio-imagen {
+    padding: 0;
+    align-items: normal;
+    height: auto;
+
+  }
+
+  #portafolio__inicio-info span:nth-child(3) {
+    width: auto;
+    text-align: center;
+
+  }
+
+  #portafolio__hello {
+    height: auto !important;
+    width: auto;
+    padding-top: 1rem;
+  }
+
+  #portafolio__skills-hobbies {
+    width: auto;
+    padding-top: 1rem;
+    height: auto !important;
+  }
+
+  #portafolio__skills-hobbies-hobbies {
+    min-height: 30vh;
+    max-height: 60vh;
+  }
+
+
+
+  #portafolio__formacion {
+    width: auto;
+    height: auto !important;
+  }
+
+  #portafolio__formacion-div {
+
+
+  }
+
+  #portafolio__formacion-div div:nth-child(1) {
+    padding: 0px;
+
+  }
+
+  #portafolio__formacion-div div:nth-child(2) {
+    margin-top: 2rem;
+
+  }
+
+  #portafolio__proyectos {
+    margin-bottom: 10rem;
+    width: auto;
+    margin-top: 7rem;
+
+  }
+
+
+
+  #portafolio__proyectos {
+    margin-bottom: 10rem;
+    width: auto;
+    margin-top: 7rem;
+
+  }
+
+  #portafolio__contacto {
+    width: auto;
+    height: auto;
+    padding-top: 2rem;
+    margin-top: 10rem;
+  }
+
+
+  #footer__social {
+    width: 100%;
+  }
+
+  #footer__social div:nth-child(1) {
+    width: 100%;
+  }
+
+  #footer__ul {
+    width: 100%;
+  }
+  #footer div span {
+    text-align: center;
+    width: 100%;
+  }
+
+  #footer__copyright {
+    width: auto;
+  }
+
+}

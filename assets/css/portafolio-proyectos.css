@@ -1,0 +1,83 @@
+@import "./index.css";
+
+@keyframes agrandar {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(2);
+    z-index: 10
+  }
+}
+
+#portafolio__proyectos {
+  width: 50rem;
+  padding-top: 1rem;
+  margin-top: 10rem;
+}
+
+#portafolio__proyectos h1 {
+  font-size: var(--size-title-content);
+  text-align: center;
+  width: 100%;
+}
+
+
+.proyectos {
+  padding: 1rem;
+  border-top: 1px solid gray;
+  margin-top: 2rem;
+}
+
+.proyectos__head {
+  display: flex;
+  margin-bottom: 2rem;
+  height: 3rem;
+}
+.proyectos__head p:nth-child(1) {
+  font-weight: bold;
+  min-width: 10rem;
+  font-size: var(--size-items);
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.proyectos__head p:nth-child(2) {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.proyectos__creados {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 25%);
+  grid-auto-rows: minmax(150px, 200px);
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.proyectos__creados li {
+  border: 1px solid silver;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  background-color: lightblue;
+}
+.proyectos__creados li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.proyectos__creados li:hover {
+  animation: agrandar;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+
+}

@@ -1,0 +1,104 @@
+@import "./index.css";
+
+
+#portafolio__contacto {
+  width: 50rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 10rem;
+  padding-top: 1rem;
+  padding-bottom: 4rem;
+}
+#portafolio__contacto p:nth-child(1) {
+  font-size: var(--size-title-content);
+  text-align: center;
+  width: 100%;
+}
+#portafolio__contacto span:nth-child(2) {
+  font-size: var(--size-items);
+  text-align: center;
+  width: 100%;
+}
+
+#formulario {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-radius: 2rem;
+}
+
+.formulario_div {
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 2rem 0rem 2rem;
+}
+
+.formulario_div-input {
+  height: 2rem;
+  font-size: 20px;
+  background-color: transparent;
+  z-index: 2;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+#formulario__div-nombre {
+
+}
+
+#formulario__div-nombre {
+}
+
+
+
+#formulario__div-email {
+
+}
+
+#formulario__div-mensaje {
+
+}
+
+#formulario__div-boton {
+  justify-content: center;
+  align-items: center;
+}
+
+#formulario__div-boton button {
+  border: 1px solid lightgray;
+  height: 2rem;
+  width: 10rem;
+  border-radius: 0.5rem;
+  font-size: var(--size-content)
+}
+
+
+#nombreInput {
+
+}
+
+#emailInput {
+
+}
+
+#mensajeTextarea {
+  resize: vertical;
+  width: auto;
+  height: 12rem;
+}
+
+#formulario__div-span-nombre, #formulario__div-span-email, #formulario__div-span-mensaje {
+  position: relative;
+  padding-bottom: 0.5rem;
+
+}
