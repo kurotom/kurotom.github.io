@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="./assets/css/formulario.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
 
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,14 +81,16 @@
     </nav>
 
     <!-- Visualizar CV -->
-    <main>
+    <main id="portafolio" class="" data-portafolio>
 
       <div id="totop" class="">
         <i class="fa-solid fa-caret-up fa-3x"></i>
       </div>
 
+
       <section id="curriculum" data-curriculum>
-        <embed id="curriculum__visualizar" type="application/pdf" src="/assets/cv/Tomas_Valdivia_Fuentes-Curriculum.pdf#toolbar=0&navpanes=0&scrollbar=0" width="" height="" data-visualizar>
+        <!-- <embed id="curriculum__visualizar" type="application/pdf" src="/assets/cv/Tomas_Valdivia_Fuentes-Curriculum.pdf#view=FitH" width="" height="" data-visualizar> -->
+        <embed id="curriculum__visualizar" type="application/pdf" src="./assets/cv/Tomas_Valdivia_Fuentes-Curriculum.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=50" width="100%" height="100%" data-visualizar />
         <!-- <iframe id="curriculum__visualizar" src="/assets/cv/Tomas_Valdivia_Fuentes-Curriculum.pdf" width="" height="" data-visualizar></iframe> -->
       </section>
 
