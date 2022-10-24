@@ -28,6 +28,7 @@
 }
 #portafolio__formacion-div a {
   text-decoration: none;
+  color: black;
 }
 #portafolio__formacion-div a:hover {
   color: black;
