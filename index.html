@@ -39,6 +39,9 @@
     <script type="text/javascript" src="./assets/js/index.js"></script>
     <script type="text/javascript" src="./assets/js/totop.js"></script>
     <script type="text/javascript" src="./assets/js/dateCopyright.js"></script>
+
+    <!-- <script type="text/javascript" src="./assets/js/handleForm.js"></script> -->
+
   </head>
   <body>
 
@@ -82,7 +85,7 @@
     <main id="portafolio" class="" data-portafolio>
 
       <div id="totop" class="">
-        <i class="fa-solid fa-caret-up fa-3x"></i>
+        <i id="iconTop" class="fa-solid fa-caret-up fa-3x"></i>
       </div>
 
       <section id="portafolio__inicio">
@@ -100,9 +103,9 @@
           </span>
         </div>
 
-        <div id="portafolio__inicio-imagen" class="">
+        <!-- <div id="portafolio__inicio-imagen" class="">
           <img src="" alt="FOTO MiA">
-        </div>
+        </div> -->
 
       </section>
 
@@ -122,7 +125,7 @@
           Además tengo conocimientos en análisis de datos con Python utilizando Numpy, Pandas, Matplotlib, and Seaborn para procesar y visualizar datos, web scraping.
         </p>
         <p>
-          Formándome contínuamente y mejorando mis habilidades como desarrollador, aportar mis conocimientos a la creación soluciones según los requerimientos, trabajando en equipo para lograr los objetivos.
+          Formándome contínuamente, investigar y aplicar nuevas técnicas para mejorar mis habilidades como desarrollador, aportar mis conocimientos a la creación soluciones según los requerimientos, trabajando en equipo para lograr los objetivos.
         </p>
 
       </section>
@@ -558,26 +561,31 @@
         <p>Pongámonos en contacto</p>
         <span>¿Tienes alguna idea en mente?, conversemos y trabajemos para que se haga realidad.</span>
 
-        <form id="formulario" class="" action="index.html" method="post" data-formulario>
+        <div id="notificacion" class="" data-notificacion>
+          <span>¡Email enviado!</span>
+        </div>
+
+        <!-- <form id="formulario" class="" action="index.html" method="post" data-formulario> -->
+        <form id="formulario" action="mailto:kurotom.dev@gmail.com" method="post" enctype="text/plain" data-formulario>
 
           <fieldset id="formulario__div-nombre" class="formulario_div">
             <legend id="formulario__div-span-nombre">Nombre</legend>
-            <input id="nombreInput" class="formulario_div-input" type="text" name="" value="" required data-nombre>
+            <input id="nombreInput" class="formulario_div-input" type="text" name="" value="" placeholder="¿Cómo te llamas?" data-nombre required>
           </fieldset>
-
 
           <fieldset id="formulario__div-email" class="formulario_div">
             <legend id="formulario__div-span-email">Email</legend>
-            <input id="emailInput" class="formulario_div-input" type="email" name="" value=""  required data-email>
+            <input id="emailInput" class="formulario_div-input" type="email" name="" value="" placeholder="¿Cuál es tu email?"  data-email required>
           </fieldset>
 
           <fieldset id="formulario__div-mensaje"  class="formulario_div">
               <legend id="formulario__div-span-mensaje" >Escriba su mensaje</legend>
-              <textarea id="mensajeTextarea" name="name" rows="" cols="" required data-mensaje></textarea>
+              <textarea id="mensajeTextarea" name="name" rows="" cols="" minlength="10" maxlength="1000" placeholder="Escriba un mensaje..." data-mensaje required>
+              </textarea>
           </fieldset>
 
           <div id="formulario__div-boton" class="formulario_div">
-            <button type="submit" name="button">Enviar</button>
+            <button type="submit" name="button" data-button-send>Enviar</button>
           </div>
 
         </form>
@@ -623,7 +631,7 @@
         </ul>
 
         <span>
-          email@development.com
+          kurotom.dev@gmail.com
         </span>
 
       </div>

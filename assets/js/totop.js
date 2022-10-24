@@ -1,31 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-  const scrollFunction = (yPosition) => {
+  const scrollFunction = (yPosition, parentButton) => {
     document.addEventListener('scroll', () => {
       if (window.pageYOffset >= yPosition) {
-        botonTop.style.cssText = `
+        parentButton.style.cssText = `
         display: block;
         opacity: 0;
         `;
       } else {
-        botonTop.style.cssText = 'display: none;';
+        parentButton.style.cssText = 'display: none;';
       }
     })
   };
 
 
-
-  const botonTop = document.getElementById("totop");
+  const divTop = document.getElementById("totop");
+  const botonTop = document.getElementById("iconTop");
 
   const url = new URL(window.location).pathname;
 
   if (url.search('curriculum') >= 1) {
-    scrollFunction(30);
+    scrollFunction(30, divTop);
   } else if (url.search('creditos') >= 1) {
-    scrollFunction(10);
+    scrollFunction(10, divTop);
   } else {
-    scrollFunction(150);
+    scrollFunction(150, divTop);
   }
 
 

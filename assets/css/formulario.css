@@ -26,6 +26,7 @@
 }
 
 #formulario {
+  height: 30rem;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -45,10 +46,12 @@
 .formulario_div-input {
   height: 2rem;
   font-size: 20px;
-  background-color: transparent;
+  /* background-color: transparent; */
   z-index: 2;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+  border: 1px solid gray;
 }
 
 
@@ -77,29 +80,43 @@
 
 #formulario__div-boton button {
   border: 1px solid lightgray;
-  height: 2rem;
-  width: 10rem;
-  border-radius: 0.5rem;
-  font-size: var(--size-content)
+  height: 3rem;
+  width: 15rem;
+  border-radius: 2rem;
+  font-size: var(--size-content);
 }
 
 
 #nombreInput {
-
+  font-size: var(--size-content);
 }
 
 #emailInput {
-
+  font-size: var(--size-content);
 }
 
 #mensajeTextarea {
   resize: vertical;
   width: auto;
   height: 12rem;
+  font-size: var(--size-content);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid gray;
 }
 
 #formulario__div-span-nombre, #formulario__div-span-email, #formulario__div-span-mensaje {
   position: relative;
   padding-bottom: 0.5rem;
+
+}
+
+
+#notificacion {
+  display: none;
+  height: 30rem;
+  /* width: 100%; */
+  font-weight: bold;
+  font-size: var(--size-title);
 
 }

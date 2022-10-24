@@ -10,8 +10,10 @@
   --size-ul-skills: 19px;
 
 
-  line-height: 0.5cm;
 
+
+  background-color: #f9fbfa;
+  line-height: 0.5cm;
   scroll-behavior: smooth;
 
 }
