@@ -36,7 +36,6 @@
   animation-timing-function: linear;
   animation-iteration-count: 1;
   width: 55rem;
-  z-index: -1;
 }
 
 #totop i {
