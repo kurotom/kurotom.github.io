@@ -6,7 +6,9 @@ export const showIndex = () => {
   let contenedor = document.querySelector("#contenido");
 
 
-  fetchData('http://localhost:8000/category').then(
+
+  // fetchData('http://localhost:8000/category').then(
+  fetchData('https://kurotom.github.io/alura/ecommerce/db.json').then(
     (response) => {
       // console.log(response)
 
