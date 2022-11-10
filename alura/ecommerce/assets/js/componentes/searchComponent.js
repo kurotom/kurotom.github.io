@@ -26,7 +26,8 @@ export const barraSearch = () => {
 
 export const showSearchItems = (query) => {
 
-  fetchData("http://localhost:8000/productos").then(
+  // fetchData("http://localhost:8000/productos").then(
+  fetchData('https://kurotom.github.io/alura/ecommerce/db.json').then(
     (response) => {
 
       let divParent = document.querySelector("[data-main-search]");
@@ -34,7 +35,7 @@ export const showSearchItems = (query) => {
 
       strongSearch.innerText = `${query}`;
 
-      let coincidencias = response.filter(item => {
+      let coincidencias = response.productos.filter(item => {
         return item.name.search(query) > -1
       });
 
@@ -102,7 +103,8 @@ export const showSearchItems = (query) => {
         borrarBtn.forEach(item => {
           item.addEventListener("click", () => {
             const itemID = item.parentNode.getAttribute("value");
-            deleteData(`http://localhost:8000/productos/${itemID}`, {"id": itemID}).then(
+            // deleteData(`http://localhost:8000/productos/${itemID}`, {"id": itemID}).then(
+            deleteData(`https://kurotom.github.io/alura/ecommerce/db.json/${itemID}`, {"id": itemID}).then(
               (response) => {
 
                 let content = document.querySelector("[data-msg-span]");
