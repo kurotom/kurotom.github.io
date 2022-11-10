@@ -34,7 +34,8 @@ export const showIndex = () => {
       })
 
 
-      fetchData('http://localhost:8000/productos').then(
+      // fetchData('http://localhost:8000/productos').then(
+      fetchData('https://kurotom.github.io/alura/ecommerce/db.json').then(
         (response) => {
           // console.log(response)
           let productContent = contenedor.querySelectorAll(".fila__productos")
