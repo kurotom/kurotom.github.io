@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // fetchData('http://localhost:8000/users').then(
         (response) => {
 
-          const usuario = response.filter(item => {
+          const usuario = response.users.filter(item => {
             return item.email === email.value
           })
 
