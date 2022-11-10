@@ -1,86 +1,69 @@
 @import "./index.css";
 
-#navbar {
-  padding-left: 7rem;
-  padding-right: 7rem;
-}
-
-#navbar ul {
-  justify-content: space-between;
-}
-
-
-#maincontent {
+#editproduct {
+  min-height: 110vh;
+  padding-right: 2rem;
+  padding-left: 2rem;
   background-color: white;
-  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 2rem;
   padding-bottom: 7rem;
 }
 
 
-#newproduct {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+#message {
+  text-align: center;
+  height: 3rem;
   justify-content: center;
-  align-items: center;
-  row-gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 8rem;
-}
-
-#mensaje_create {
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: center;
-  row-gap: 1rem;
   font-size: 20px;
   font-weight: bold;
-  color: var(--color-precio);
-  column-gap: 1rem;
-  height: 4rem;
-}
-#mensaje_create-div {
-  display: none;
-  flex-direction: row;
-}
-#mensaje_create-span {
-  display: flex;
-  flex-direction: row;
-  width: 28rem;
-  justify-content: space-evenly;
-}
-#mensaje_create span {
-  border-bottom: 1px solid var(--color-precio);
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-#mensaje_create #closeX {
-  width: 1rem;
-  padding: 0;
-  text-align: center;
-  font-size: 30px;
-  border: none;
-}
-#mensaje_create #closeX:hover {
-  cursor: pointer;
-  transform: scale(1.1);
 }
 
-#newproduct__title {
+#message__contenido {
+  color: var(--color-precio);
+  width: 50%;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-fondo);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+}
+#message__contenido:hover {
+  box-shadow: 0px 3px 8px gray;
+}
+#message__span {
+  font-weight: normal;
+}
+#message__close {
+  color: var(--color-precio);
+}
+#message__close:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+/* END MESSAGE */
+
+
+/*  */
+#editproduct__title {
 
   padding-left: 2rem;
   width: 30rem;
 }
-#newproduct__title h1 {
+#editproduct__title h1 {
   color: var(--color-precio);
   font-weight: bold;
   font-size: 30px;
 }
 
 
-#newproduct__form {
+#editproduct__form {
   display: flex;
   flex-direction: column;
   row-gap: 2rem;
@@ -88,7 +71,7 @@
   width: 30rem;
 }
 
-#newproduct__form .fieldsetForm {
+#editproduct__form .fieldsetForm {
   display: flex;
   flex-direction: column;
   row-gap: 0.5rem;
@@ -99,7 +82,7 @@
   color: gray;
   padding-left: 1rem;
 }
-.fieldsetForm input {
+.fieldsetForm input, .fieldsetForm textarea {
   border: none;
   height: 2rem;
   padding-left: 1rem;
@@ -107,8 +90,15 @@
   margin-left: 1rem;
   margin-right: 1rem;
   border-bottom: 1px solid gray;
+  font-family: var(--font-family);
 }
-.fieldsetForm input:focus-visible {
+.fieldsetForm textarea {
+  height: 6rem;
+  resize: vertical;
+  font-family: var(--font-family);
+  font-size: 20px;
+}
+.fieldsetForm input:focus-visible, .fieldsetForm textarea:focus-visible {
   outline: none;
   /* outline-style: dashed;
   outline-color: var(--color-boton);
@@ -118,16 +108,21 @@
 #categoria {
   display: grid;
   grid-template-areas: "existente nueva";
-  grid-template-columns: 10rem auto;
+  /* grid-template-columns: 10rem auto; */
+  grid-template-columns: 12rem;
+  justify-content: center;
   padding-left: 1rem;
   padding-right: 1rem;
   align-items: flex-start;
   column-gap: 1rem;
 }
+
 #categoria__existente {
   grid-area: existente;
 }
 #categoria__existente select {
+  font-family: var(--font-family));
+  font-size: 18px;
   width: 100%;
   position: relative;
   top: 0.33rem;
@@ -175,7 +170,7 @@
 }
 
 
-#newproduct__form button {
+#editproduct__form button {
   color: white;
   text-decoration: none;
   background-color: var(--color-boton);
@@ -191,6 +186,35 @@
   text-shadow: 0px 1px 5px navy;
 }
 
-#newproduct__form button:hover {
+#editproduct__form button:hover {
   cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+
+}
+
+.div-span-form {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-span-form span {
+  font-size: 15px;
+  font-weight: normal;
+  border-left: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 1rem;
+}
+.div-span-form span:hover {
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px gray;
+  border-radius: 1rem;
+  background-color: navy;
+  color: white;
+  text-shadow: 0px 1px 5px black;
+  font-weight: bold;
 }

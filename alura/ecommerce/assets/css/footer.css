@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: column;
   height: 20rem;
-  color: var(--color-precio)
+  color: var(--color-precio);
 }
 
 #footer__datos {
@@ -122,6 +122,10 @@
   font-weight: bold;
   border-radius: 4px;
   border: none;
+}
+#form_contacto button:hover {
+  cursor: pointer;
+  font-size: 14px;
 }
 
 

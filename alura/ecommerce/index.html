@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/search.css">
     <link rel="stylesheet" href="./assets/css/principal.css">
-    <link rel="stylesheet" href="./assets/css/login.css">
-    <link rel="stylesheet" href="./assets/css/new_product.css">
-    <link rel="stylesheet" href="./assets/css/all_products.css">
+    <!-- <link rel="stylesheet" href="./assets/css/login.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/new_product.css"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/all_products.css"> -->
     <link rel="stylesheet" href="./assets/css/footer.css">
 
     <link rel="stylesheet" href="./assets/css/responsivo.css">
@@ -28,7 +29,7 @@
 
 
     <!-- Scripts -->
-    <script type="text/javascript" src="./assets/js/index.js"></script>
+    <script type="module" src="./assets/js/index.js"></script>
 
 
     <title>Proyecto Ecommerce</title>
@@ -43,231 +44,35 @@
             <img src="./assets/img/Logo.png" alt="logo">
           </a>
         </li>
-        <li id="navbar__form">
-          <form class="" action="index.html" method="post">
+        <li id="navbar__search">
+          <form id="navbar__search-form" class="" data-search>
             <fieldset>
-              <input type="text" name="" value="" placeholder="Buscar...">
+              <input type="text" name="" value="" placeholder="Buscar..." data-search-input>
+              <button id="navbar__search-submit" type="submit" name="button" title="Buscar"></button>
             </fieldset>
           </form>
         </li>
         <li>
-          <a href="login.html">Login</a>
+          <a id="loginBtn" href="login.html">Login</a>
         </li>
       </ul>
     </nav>
 
 
-    <main id="maincontent">
+    <main id="maincontent" data-main>
 
-      <div id="banner" class="">
-        <!-- <img src="./assets/img/banner.png" alt="banner"> -->
+      <div id="banner" class="" data-main-banner>
         <div id="banner__divs" class="">
           <h1>Febrero Promocional</h1>
           <span>Productos seleccionados con 33% de descuento</span>
-          <a href="#">Ver Consolas</a>
+          <a id="banner__divs-promos" href="promos.html?cat=2" data-boton-promos>Ver Consolas</a>
         </div>
       </div>
 
-      <div id="contenido" class="">
-        <div id="fila1" class="fila_content">
-          <div id="fila1__head" class="fila_head">
-            <span>Star Wars</span>
-            <a href="productos.html">
-              Ver todo
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
+      <div id="contenido" class="" data-main-contenido>
 
-          <div id="fila1__productos" class="fila__productos">
-            <div class="producto">
-              <img src="./assets/img/unsplash_4OHkK555s1A.png" alt="productos">
-              <div class="producto__info">
-                <span>Item 1</span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_1VV1MRafd7A.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_6FDXGY9J6y4.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_epRFE_hBNjo.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_KeGToDVN0l4.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_R8L1l9RN198.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div id="fila2" class="fila_content">
-
-          <div id="fila2__head" class="fila_head">
-            <span>Consolas</span>
-            <a href="productos.html">
-              Ver todo
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-
-          <div id="fila2__productos" class="fila__productos">
-            <div class="producto">
-              <img src="./assets/img/unsplash_0POwK6iAiRQ.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_bUgaIaZysH0.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_caNzzoxls8Q.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_k-xYhI3-gJM.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_ZV7lnfyQLmA.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-
-            <div class="producto">
-              <img src="./assets/img/unsplash_Zjn4dT993-g.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-
-        <div id="fila3" class="fila_content">
-          <div id="fila3__head" class="fila_head">
-            <span>Diversos</span>
-            <a href="productos.html">
-              Ver todo
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
-          </div>
-          <div id="fila3__productos" class="fila__productos">
-            <div class="producto">
-              <img src="./assets/img/unsplash_sYVY_ZKwaxU.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-            <div class="producto">
-              <img src="./assets/img/unsplash_R8L1l9RN198.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-            <div class="producto">
-              <img src="./assets/img/unsplash_r27umXAelDc.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-            <div class="producto">
-              <img src="./assets/img/unsplash_MxVkWPiJALs.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-            <div class="producto">
-              <img src="./assets/img/unsplash_jMT6BrgBuXU.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-            <div class="producto">
-              <img src="./assets/img/unsplash_fMP-oCze3AY.png" alt="productos">
-              <div class="producto__info">
-                <span></span>
-                <span>$ 60,00</span>
-                <a href="descripcion.html">Ver producto</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
       </div>
+
 
     </main>
 
@@ -292,7 +97,7 @@
 
           <div id="footer__datos-contacto" class="">
             <span>Hable con nosotros</span>
-            <form id="form_contacto" class="" action="index.html" method="post">
+            <form id="form_contacto" class="" data-form-contacto>
               <fieldset id="form_contacto-fs1" class="campos">
                 <input type="text" name="" value="" >
                 <span>Nombre</span>
@@ -313,7 +118,7 @@
 
       <div id="footer__creditos" class="">
         <span>
-          Desarrollado por <span id="me">Tomás Valdivia</span> - <a href="https://github.com/kurotom">kurotom</a>
+          Desarrollado por <span id="me"><a href="https://github.com/kurotom">Tomás Valdivia - kurotom</a></span>
         </span>
         <span>2022</span>
       </div>

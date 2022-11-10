@@ -1,0 +1,69 @@
+@import "./index.css";
+
+
+@media screen and (max-width: 500px) {
+
+  #all__body {
+    margin-left: 2rem !important;
+    margin-right: 2rem !important;
+  }
+
+  #title {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 2rem;
+  }
+  .producto:nth-child(+n) {
+    display: flex !important;
+    width: 47% !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+    font-weight: bold;
+  }
+
+  #maincontent {
+    min-height: 50vh;
+  }
+
+  #footer {
+    margin-top: 4rem;
+  }
+
+
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+  #title {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+  }
+
+  #all__body {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .producto:nth-child(+n) {
+    display: flex !important;
+    width: 23% !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    row-gap: 1rem;
+    font-weight: bold;
+  }
+
+  #maincontent {
+    min-height: 50vh;
+  }
+
+  #footer {
+    margin-top: 4rem;
+  }
+
+}

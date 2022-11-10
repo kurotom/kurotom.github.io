@@ -11,44 +11,70 @@
 #navbar ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
-#navbar__form {
+#navbar__search {
   width: 25rem;
 }
-#navbar__form form {
+#navbar__search #navbar__search-form {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#navbar__form form fieldset {
+#navbar__search form fieldset {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 20rem;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
-}
-#navbar__form form fieldset input {
   background-color: var(--color-fondo);
+}
+#navbar__search form fieldset input {
+  background-color: transparent;
   width: 100%;
   z-index: 5;
   height: 2.2rem;
   border-radius: 1rem;
   border: none;
   padding-left: 1rem;
-  padding-right: 1rem;
   font-size: 15px;
-
-  background-image: url(/assets/img/Icone.svg);
-  background-repeat: no-repeat;
-  background-position: right;
-  background-origin: content-box;
-
+  outline: none;
 }
+
+#navbar__search form fieldset:focus-within {
+  outline: 2px solid var(--color-boton);
+  box-shadow: 0px 1px 8px navy;
+}
+#navbar__search form fieldset input:focus + #navbar__search-submit {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+
+#navbar__search-submit {
+  display: none;
+  background-image: url("/assets/img/Icone.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 25px;
+  height: 30px;
+  padding: 0;
+  border: 0px;
+  position: relative;
+  right: 1rem;
+  z-index: 5;
+  background-color: transparent;
+}
+#navbar__search-submit:hover, #navbar__search-submit:active {
+  background-color: transparent;
+  font-weight: bold;
+  transform: scale(1.5);
+}
+
 /* #navbar__form form img {
   z-index: 1;
   position: relative;
@@ -64,7 +90,7 @@
   font-weight: bold;
 }
 
-#navbar ul li:last-child {
+#navbar #navbar__search {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,19 +105,21 @@
 
 #banner {
 	/* BANNER PARA GITHUB PAGES */
-	background-image:	url('https://kurotom.github.io/alura/ecommerce/assets/img/banner.png');
+	/* background-image:	url("https://kurotom.github.io/alura/ecommerce/assets/img/banner.png"); */
 
 	/* PARA LOCAL*/
-  /* background-image: url('/assets/img/banner.png'); */
+  background-image: url("/assets/img/banner.png");
 
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   height: 20rem;
+  width: auto;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
 }
 
 #banner img {
@@ -108,6 +136,7 @@
   color: white;
   row-gap: 1rem;
   bottom: 3rem;
+  width: 80% !important;
   /* text-shadow: 0 2px 6px black; */
 }
 #banner__divs h1 {
@@ -147,6 +176,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  min-height: 100vh;
 }
 
 .fila_head {
@@ -178,8 +209,8 @@
   flex-direction: column;
   justify-content: center;
   row-gap: 1rem;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
 }
 
@@ -191,6 +222,9 @@
 }
 
 .producto {
+  display: none;
+}
+.producto:nth-child(-n+6) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -202,6 +236,7 @@
 .producto img {
   box-shadow: 0px 1px 5px gray;
   border-radius: 2px;
+  margin-bottom: 1rem;
 }
 
 .producto__info {
