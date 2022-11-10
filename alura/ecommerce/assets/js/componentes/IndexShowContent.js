@@ -11,10 +11,7 @@ export const showIndex = () => {
   fetchData('https://kurotom.github.io/alura/ecommerce/db.json').then(
     (response) => {
       // console.log(response)
-
-      console.log(response)
-
-      response.forEach(item => {
+      response.category.forEach(item => {
         let fila = document.createElement('div')
         fila.setAttribute("id", `fila${item.id}`);
         fila.setAttribute("class", "fila_content");
@@ -43,7 +40,7 @@ export const showIndex = () => {
           let productContent = contenedor.querySelectorAll(".fila__productos")
 
           productContent.forEach(itemParent => {
-            response.map(item => {
+            response.productos.map(item => {
               if (item.cat === parseInt(itemParent.getAttribute('value'))) {
                 let productoHTML = `<div class="producto">
                   <img src="${item.img}" alt="productos">
