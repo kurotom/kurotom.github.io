@@ -12,6 +12,8 @@ export const showIndex = () => {
     (response) => {
       // console.log(response)
 
+      console.log(response)
+
       response.forEach(item => {
         let fila = document.createElement('div')
         fila.setAttribute("id", `fila${item.id}`);
