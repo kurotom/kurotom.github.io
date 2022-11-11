@@ -1,3 +1,4 @@
+import { categoryURL, productosURL, usersURL} from '../urlsDB.js';
 import { fetchData } from '../handlers/fetch_get.js';
 import { postData } from '../handlers/fetch_post.js';
 
@@ -25,7 +26,7 @@ export const handleForm = () => {
     evento.preventDefault();
 
     if (inputCatProducto.value !== "") {
-      postData('http://localhost:8000/category', {"name": inputCatProducto.value}).then(
+      postData(categoryURL, {"name": inputCatProducto.value}).then(
         (response) => {
           // console.log(response)
           console.log("Done")
@@ -60,7 +61,7 @@ export const handleForm = () => {
       "desc": descripcionProducto.value
     };
 
-    postData('http://localhost:8000/productos', objetoProducto).then(
+    postData(productosURL, objetoProducto).then(
       (response) => {
 
         // selectHandler();
@@ -100,7 +101,7 @@ export const handleForm = () => {
 
 export const selectHandler = () => {
   let select = document.querySelector("[data-form-category-select]");
-  fetchData('http://localhost:8000/category').then(
+  fetchData(categoryURL).then(
     (response) => {
       response.map(item => {
         let template = `<option id="${item.name}" value="${item.id}">${item.name}</option>`;
@@ -134,7 +135,7 @@ export const selectHandler = () => {
 
 export const selectEditCategoria = () => {
   let select = document.querySelector("[data-form-category-select]");
-  fetchData('http://localhost:8000/category').then(
+  fetchData(categoryURL).then(
     (response) => {
       response.map(item => {
         let template = `<option id="${item.name}" value="${item.id}">${item.name}</option>`;

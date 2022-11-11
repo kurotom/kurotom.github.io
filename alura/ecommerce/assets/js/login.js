@@ -1,3 +1,5 @@
+import { categoryURL, productosURL, usersURL} from './urlsDB.js';
+
 import { fetchData } from './handlers/fetch_get.js';
 import { postData } from './handlers/fetch_post.js';
 
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "email": emailNewUser.value,
         "isadmin": false
       }
-      postData('http://localhost:8000/users', objeto).then(
+      postData(usersURL, objeto).then(
         (response) => {
           console.log(response)
         },
@@ -107,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (email.value.length > 0 || password.value.length > 0) {
 
-      fetchData('http://localhost:8000/users').then(
+      fetchData(usersURL).then(
         (response) => {
 
           const usuario = response.filter(item => {

@@ -1,6 +1,7 @@
+import { categoryURL, productosURL, usersURL} from '../urlsDB.js';
+
 import { fetchData } from '../handlers/fetch_get.js';
 
-import { categoryURL, productosURL} from '../urlsDB.js';
 
 
 export const showIndex = () => {
