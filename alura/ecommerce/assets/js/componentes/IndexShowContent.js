@@ -1,5 +1,7 @@
 import { fetchData } from '../handlers/fetch_get.js';
 
+import { categoryURL, productosURL} from '../urlsDB.js';
+
 
 export const showIndex = () => {
 
@@ -7,11 +9,10 @@ export const showIndex = () => {
 
 
 
-  // fetchData('http://localhost:8000/category').then(
-  fetchData('https://kurotom.github.io/alura/ecommerce/db.json').then(
+  fetchData(categoryURL).then(
     (response) => {
       // console.log(response)
-      response.category.forEach(item => {
+      response.forEach(item => {
         let fila = document.createElement('div')
         fila.setAttribute("id", `fila${item.id}`);
         fila.setAttribute("class", "fila_content");
@@ -34,14 +35,13 @@ export const showIndex = () => {
       })
 
 
-      // fetchData('http://localhost:8000/productos').then(
-      fetchData('https://kurotom.github.io/alura/ecommerce/db.json').then(
+      fetchData(productosURL).then(
         (response) => {
           // console.log(response)
           let productContent = contenedor.querySelectorAll(".fila__productos")
 
           productContent.forEach(itemParent => {
-            response.productos.map(item => {
+            response.map(item => {
               if (item.cat === parseInt(itemParent.getAttribute('value'))) {
                 let productoHTML = `<div class="producto">
                   <img src="${item.img}" alt="productos">

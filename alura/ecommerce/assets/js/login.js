@@ -72,8 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "email": emailNewUser.value,
         "isadmin": false
       }
-      postData('https://kurotom.github.io/alura/ecommerce/db.json', objeto).then(
-      // postData('http://localhost:8000/users', objeto).then(
+      postData('http://localhost:8000/users', objeto).then(
         (response) => {
           console.log(response)
         },
@@ -108,11 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (email.value.length > 0 || password.value.length > 0) {
 
-      fetchData('https://kurotom.github.io/alura/ecommerce/db.json').then(
-      // fetchData('http://localhost:8000/users').then(
+      fetchData('http://localhost:8000/users').then(
         (response) => {
 
-          const usuario = response.users.filter(item => {
+          const usuario = response.filter(item => {
             return item.email === email.value
           })
 
