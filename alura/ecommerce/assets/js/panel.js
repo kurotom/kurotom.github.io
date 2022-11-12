@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const confirmDeleteAccount = document.querySelector("[data-confirm-delete]");
   const cancelDeleteAccount = document.querySelector("[data-cancel-delete]");
   confirmDeleteAccount.addEventListener("click", () => {
-    deleteData(usersURL + `${userData.id}`, {"id": userData.id}).then(
+    deleteData(usersURL + `/${userData.id}`, {"id": userData.id}).then(
       (response) => {
         window.localStorage.removeItem("user");
         window.location.href = "index.html";
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let userData = JSON.parse(window.localStorage.getItem("user"));
       userData.pass = newPass1.value;
 
-      putData(usersURL + `${userData.id}`, userData).then(
+      putData(usersURL + `/${userData.id}`, userData).then(
         (response) => {
           panelUser.style.display = "flex";
           changePanel.style.display = "none";

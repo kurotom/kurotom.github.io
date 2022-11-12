@@ -77,7 +77,7 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
         borrarBtn.forEach(item => {
           item.addEventListener("click", () => {
             const itemID = item.parentNode.getAttribute("value");
-            deleteData(productosURL + `${itemID}`, {"id": itemID}).then(
+            deleteData(productosURL + `/${itemID}`, {"id": itemID}).then(
               (response) => {
 
                 let content = document.querySelector("[data-msg-span]");
