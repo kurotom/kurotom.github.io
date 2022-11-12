@@ -23,10 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let url = new URL(window.location.href);
   let idProducto = url.search.split('?id=')[1];
 
+
   fetchData(productosURL).then(
     (response) => {
       let itemArray = response.filter(item => {
-        return parseInt(item.id) === parseInt(idProducto);
+        return item.id.toString() === idProducto.toString();
       })
       if (itemArray.length === 1) {
         let item = itemArray[0];
