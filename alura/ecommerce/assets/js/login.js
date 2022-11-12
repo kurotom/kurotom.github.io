@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
       pass1NewUser.value = "";
       pass2NewUser.value = "";
 
-      window.location.href = "/";
+      window.location.href = "index.html";
     } else {
       divMensajes.innerHTML += `<span>Las contraseñas deben coincidir</span>`
 
@@ -106,6 +106,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     contenedorMSG.style.display = 'none';
     spanMSG.innerText = "";
+
+    // a = "email@test.co"
+    // re = /\w+@\w+\.\w{2,3}/gm
+    // a.match(re)
+
 
     if (email.value.length > 0 || password.value.length > 0) {
 
@@ -139,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
               window.localStorage.setItem("user", JSON.stringify(dataUser));
 
-              window.location.href = "/";
+              window.location.href = "index.html";
 
 
             } else {

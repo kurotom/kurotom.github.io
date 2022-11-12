@@ -11,6 +11,7 @@ export const showIndex = () => {
 
 
   fetchData(categoryURL).then(
+  // fetchData('http://localhost:8000/category').then(
     (response) => {
       // console.log(response)
       response.forEach(item => {
@@ -35,8 +36,8 @@ export const showIndex = () => {
 
       })
 
-
       fetchData(productosURL).then(
+      // fetchData('http://localhost:8000/productos').then(
         (response) => {
           // console.log(response)
           let productContent = contenedor.querySelectorAll(".fila__productos")

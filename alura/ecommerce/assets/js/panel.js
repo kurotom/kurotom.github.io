@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteData(usersURL + `${userData.id}`, {"id": userData.id}).then(
       (response) => {
         window.localStorage.removeItem("user");
-        window.location.href = "/";
+        window.location.href = "index.html";
       },
       (error) => {
       }
