@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchData(productosURL).then(
     (response) => {
       let itemArray = response.filter(item => {
-        return item.id === idProducto;
+        return parseInt(item.id) === parseInt(idProducto);
       })
       if (itemArray.length === 1) {
         let item = itemArray[0];
