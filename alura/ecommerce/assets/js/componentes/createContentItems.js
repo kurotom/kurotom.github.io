@@ -83,6 +83,8 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
                 content.innerHTML += `<span>Elemento borrado</span>`;
                 document.querySelector("[data-msg]").style.display = "flex";
 
+                contenedorProductos.innerHTML = "";
+
                 handleProductos(contenedorProductos);
 
               },
