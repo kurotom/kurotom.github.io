@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
           }
 
-          putData(productosURL + `${item.id}`, objetoNuevo).then(
+          putData(productosURL + `/${item.id}`, objetoNuevo).then(
             (response) => {
 
               window.history.back();
