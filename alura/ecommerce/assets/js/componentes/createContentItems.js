@@ -5,6 +5,8 @@ import { deleteData } from '../handlers/fetch_delete.js';
 
 export const handleProductos = (parentDiv, productosIterable=[]) => {
 
+  let contenedorProductos = parentDiv;
+
   // BOTON CERRAR ALERTAS
   let closeBanner = document.querySelector("[data-msg-close]");
   closeBanner.addEventListener("click", () => {
@@ -14,9 +16,6 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
   //
   //
 
-
-
-  let contenedorProductos = parentDiv;
 
   if (productosIterable.length === 0) {
     fetchData(productosURL).then(
@@ -84,6 +83,7 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
                 content.innerHTML += `<span>Elemento borrado</span>`;
                 document.querySelector("[data-msg]").style.display = "flex";
 
+                handleProductos(contenedorProductos);
 
               },
               (error) => {
