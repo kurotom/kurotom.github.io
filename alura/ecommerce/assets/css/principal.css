@@ -236,7 +236,7 @@
   box-shadow: 0px 1px 5px gray;
   border-radius: 2px;
   margin-bottom: 1rem;
-  width: 176px;
+  width: 176px !important;
 }
 
 .producto__info {

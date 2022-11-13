@@ -80,11 +80,16 @@ export const handleProductos = (parentDiv, productosIterable=[]) => {
               (response) => {
 
                 let content = document.querySelector("[data-msg-span]");
-                content.innerHTML += `<span>Elemento borrado</span>`;
+                content.innerHTML = `<span>Elemento borrado</span>`;
                 document.querySelector("[data-msg]").style.display = "flex";
 
-                contenedorProductos.innerHTML = "";
+                setTimeout(() => {
+                  content.innerHTML = "";
+                  document.querySelector("[data-msg]").style.display = "none";
+                }, 2500);
 
+
+                contenedorProductos.innerHTML = "";
                 handleProductos(contenedorProductos);
 
               },

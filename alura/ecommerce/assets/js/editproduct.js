@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       let itemArray = response.filter(item => {
         return item.id.toString() === idProducto.toString();
       })
-      if (itemArray.length === 1) {
+      if (itemArray.length >= 1) {
         let item = itemArray[0];
 
         let formEdit = document.querySelector("[data-form-new]");
@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
         let priceItem = document.querySelector("[data-form-precio]");
         let descriptionItem = document.querySelector("[data-form-descripcion]");
 
-        selectCategory.value = item.cat;
+        selectCategory.setAttribute("value", item.cat);
+        selectCategory.value = `${item.cat}`;
 
         urlImg.setAttribute("placeholder", `${item.img}`);
         nameItem.setAttribute("placeholder", `${item.name}`);
