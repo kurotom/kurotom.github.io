@@ -39,7 +39,7 @@ export const showSearchItems = (query) => {
       strongSearch.innerText = `${query}`;
 
       let coincidencias = searchProductos.filter(item => {
-        return item.name.toLowerCase.search(query) > -1
+        return item.name.toLowerCase().search(query) > -1
       });
 
 
