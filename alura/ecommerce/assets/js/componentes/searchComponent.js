@@ -26,7 +26,7 @@ export const barraSearch = () => {
 
 export const showSearchItems = (query) => {
 
-  const consultaQuery = query;
+  const consultaQuery = query.toLowerCase();
 
   fetchData(productosURL).then(
     (response) => {
@@ -39,7 +39,7 @@ export const showSearchItems = (query) => {
       strongSearch.innerText = `${query}`;
 
       let coincidencias = searchProductos.filter(item => {
-        return item.name.search(query) > -1
+        return item.name.toLowerCase.search(query) > -1
       });
 
 
