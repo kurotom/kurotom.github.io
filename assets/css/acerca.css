@@ -1,0 +1,27 @@
+@import "./index.css";
+
+
+#info {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-size: var(--size-items);
+  row-gap: 1rem;
+
+}
+
+.linkGithub {
+  text-decoration: none;
+  color: #3f3f3f;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.linkGithub:hover {
+  text-decoration: underline;
+  text-decoration-color: orangered;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1.5px;
+}

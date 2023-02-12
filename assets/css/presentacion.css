@@ -1,0 +1,42 @@
+@import "./index.css";
+
+h1 {
+  font-size: var(--size-title);
+  font-family: var(--title-font);
+
+}
+
+#presentacion {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "a b";
+  grid-template-columns: 40% auto;
+  column-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 0;
+}
+
+#presentacion div:nth-child(1) {
+  height: 15rem;
+  grid-area: a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 2rem;
+  font-size: var(--size-title-content);
+}
+#presentacion div:nth-child(1) span {
+  font-size: 20px;
+}
+
+#presentacion div:nth-child(2) {
+  height: 15rem;
+  grid-area: b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+}

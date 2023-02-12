@@ -1,7 +1,19 @@
 @import "./index.css";
 
+html {
+  background: rgb(63,63,63);
+  background: linear-gradient(180deg, rgba(63,63,63,1) 4%, rgba(255,255,255,1) 4%, rgba(255,255,255,0) 100%);
+}
+
+body * {
+  font-family: var(--font-openSans), sans-serif;
+}
 
 main {
-  min-height: 45vh;
+  margin-top: 3rem;
+}
 
+section {
+  margin-right: 10rem;
+  margin-left: 10rem;
 }

@@ -1,15 +1,24 @@
 :root {
   --web-font: 'Chakra Petch', sans-serif;
   --title-font: 'Abril Fatface', cursive;
+  --font-openSans: 'Source Sans Pro', sans-serif;
   --size-title: 32px;
-  --size-items: 19px;
+  --size-items: 20px;
 
   --size-title-content: 26px;
   --size-content: 17px;
 
   --size-ul-skills: 19px;
 
+  --icons-logo: 40px;
 
+
+  --color-dark: #3F3F3F;
+  --font-light: white;
+
+
+  --color-ligth: #EBEBEB;
+  --font-dark: #3F3F3F;
 
 
   background-color: #f9fbfa;
